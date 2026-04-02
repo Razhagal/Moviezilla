@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moviezilla.Web", "Moviezilla.Web\Moviezilla.Web.csproj", "{7E18E963-F072-4F4B-9820-9CD7F345A416}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moviezilla.Data", "Moviezilla.Data\Moviezilla.Data.csproj", "{5A60FCEE-210A-4D45-926E-E6BE64634243}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moviezilla.Data.Models", "Moviezilla.Data.Models\Moviezilla.Data.Models.csproj", "{2237F5D4-962C-44A3-A5A9-788E904FC0FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3A5C53BE-F6F6-47EC-8363-12DE9F1F86BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E18E963-F072-4F4B-9820-9CD7F345A416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E18E963-F072-4F4B-9820-9CD7F345A416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E18E963-F072-4F4B-9820-9CD7F345A416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E18E963-F072-4F4B-9820-9CD7F345A416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A60FCEE-210A-4D45-926E-E6BE64634243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A60FCEE-210A-4D45-926E-E6BE64634243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A60FCEE-210A-4D45-926E-E6BE64634243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A60FCEE-210A-4D45-926E-E6BE64634243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2237F5D4-962C-44A3-A5A9-788E904FC0FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2237F5D4-962C-44A3-A5A9-788E904FC0FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2237F5D4-962C-44A3-A5A9-788E904FC0FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2237F5D4-962C-44A3-A5A9-788E904FC0FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A60FCEE-210A-4D45-926E-E6BE64634243} = {3A5C53BE-F6F6-47EC-8363-12DE9F1F86BD}
+		{2237F5D4-962C-44A3-A5A9-788E904FC0FC} = {3A5C53BE-F6F6-47EC-8363-12DE9F1F86BD}
+	EndGlobalSection
+EndGlobal
