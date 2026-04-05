@@ -21,6 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Moviezilla.Data.Common\Moviezilla.Data.Common.csproj" />
       <ProjectReference Include="..\Moviezilla.Data.Models\Moviezilla.Data.Models.csproj" />
     </ItemGroup>
 
