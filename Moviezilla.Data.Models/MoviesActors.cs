@@ -1,11 +1,16 @@
-﻿namespace Moviezilla.Data.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
+namespace Moviezilla.Data.Models;
+
+[Comment("Movies and Actors Joint Table")]
 public class MoviesActors
 {
+    [Comment("Movie Identifier")]
     public Guid MovieId { get; set; }
 
     public Movie Movie { get; set; } = null!;
 
+    [Comment("Actor Identifier")]
     public Guid ActorId { get; set; }
     
     public Actor Actor { get; set; } = null!;

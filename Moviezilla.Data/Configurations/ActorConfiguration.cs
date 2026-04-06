@@ -13,8 +13,19 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         builder
             .HasKey(a => a.Id);
 
+        builder
+            .Property(a => a.Name)
+            .IsRequired()
+            .HasMaxLength(NameMaxLength);
 
+        builder
+            .Property(a => a.ShortBio)
+            .HasMaxLength(BiographyMaxLength);
 
+        builder
+            .Property(a => a.ImageUrl)
+            .HasMaxLength(ImageUrlMaxLength);
+        
         builder
             .Property(a => a.IsDeleted)
             .IsRequired()
@@ -22,5 +33,11 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         
         builder
             .HasQueryFilter(a => !a.IsDeleted);
+    }
+
+    private List<Actor> SeedActors()
+    {
+        // TODO;
+        return null;
     }
 }
