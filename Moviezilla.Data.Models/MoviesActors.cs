@@ -14,4 +14,7 @@ public class MoviesActors
     public Guid ActorId { get; set; }
     
     public Actor Actor { get; set; } = null!;
+
+    [Comment("Name of the  character played by the Actor")]
+    public string CharacterName { get; set; } = null!;
 }

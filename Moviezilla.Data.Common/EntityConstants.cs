@@ -24,6 +24,8 @@ public static class EntityConstants
     {
         public const int NameMinLength = 2;
         public const int NameMaxLength = 100;
+        public const int PlayedCharacterNameMinLength = 1;
+        public const int PlayedCharacterNameMaxLength = 100;
         public const int BiographyMaxLength = 1500;
         public const int ImageUrlMaxLength = 2048;
     }
