@@ -41,13 +41,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("6fd39241-45d7-4435-beeb-6ef22cc912de"),
             Name = "Aaron Eckhart",
-            ShortBio = "American actor known for dramatic roles in thrillers and character-driven films."
+            ShortBio = "American actor known for dramatic roles in thrillers and character-driven films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTc4MTAyNzMzNF5BMl5BanBnXkFtZTcwMzQ5MzQzMg@@._V1_FMjpg_UX286_.jpg"
         },
         new Actor()
         {
             Id = new Guid("4123086b-dc4f-4e51-81fa-f64a6fc7f7bd"),
             Name = "Al Pacino",
-            ShortBio = "American actor known for intense, iconic roles in crime and drama."
+            ShortBio = "American actor known for intense, iconic roles in crime and drama.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTQzMzg1ODAyNl5BMl5BanBnXkFtZTYwMjAxODQ1._V1_FMjpg_UX266_.jpg"
         },
         new Actor()
         {
@@ -72,13 +74,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("f3b65829-46e4-4143-b39b-86136de26b7f"),
             Name = "Amanda Seyfried",
-            ShortBio = "American actress known for musicals, dramas, and comedic roles."
+            ShortBio = "American actress known for musicals, dramas, and comedic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BYTM0ZDcxNzctMzIwNi00NjliLTg5YzEtZDc4MDk0MDFiNzA4XkEyXkFqcGc@._V1_FMjpg_UX1168_.jpg"
         },
         new Actor()
         {
             Id = new Guid("8d806e2a-9b9e-407e-bfde-d95afc6f0c04"),
             Name = "Andrew Garfield",
-            ShortBio = "English-American actor known for emotional performances in dramas and franchises."
+            ShortBio = "English-American actor known for emotional performances in dramas and franchises.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BYWQyNzhiZjYtNjJlOS00MTRlLWI0YTYtZjg1YzJmNTc2YjQwXkEyXkFqcGc@._V1_FMjpg_UY8192_.jpg"
         },
         new Actor()
         {
@@ -90,13 +94,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("0f312b1b-a6cd-4ed2-afe9-6b493205c424"),
             Name = "Anthony Hopkins",
-            ShortBio = "Welsh actor renowned for commanding dramatic and villainous roles."
+            ShortBio = "Welsh actor renowned for commanding dramatic and villainous roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTg5ODk1NTc5Ml5BMl5BanBnXkFtZTYwMjAwOTI4._V1_FMjpg_UX287_.jpg"
         },
         new Actor()
         {
             Id = new Guid("d85eed69-92c7-4bcb-b978-9c2179a19f6c"),
             Name = "Arnold Schwarzenegger",
-            ShortBio = "Austrian-American actor and former bodybuilder known for action cinema."
+            ShortBio = "Austrian-American actor and former bodybuilder known for action cinema.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTI3MDc4NzUyMV5BMl5BanBnXkFtZTcwMTQyMTc5MQ@@._V1_FMjpg_UX318_.jpg"
         },
         new Actor()
         {
@@ -108,13 +114,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("310706f7-2d9a-4e5a-8e2f-5214084fd26d"),
             Name = "Ben Affleck",
-            ShortBio = "American actor, writer, and director known for thrillers and dramas."
+            ShortBio = "American actor, writer, and director known for thrillers and dramas.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNTFjZDU5NmYtYzZlMy00YThmLTg5ZjUtYjkyZWI2OTk2Mjc1XkEyXkFqcGc@._V1_FMjpg_UY5041_.jpg"
         },
         new Actor()
         {
             Id = new Guid("de41865b-5b44-43f7-9275-495898638232"),
             Name = "Ben Kingsley",
-            ShortBio = "English actor known for authoritative, versatile performances."
+            ShortBio = "English actor known for authoritative, versatile performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BOTU2Njg2NzM4M15BMl5BanBnXkFtZTgwNjYwNjQwMTI@._V1_FMjpg_UX595_.jpg"
         },
         new Actor()
         {
@@ -132,13 +140,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("9d666c80-52f7-4e34-8871-245c0911979e"),
             Name = "Billy Zane",
-            ShortBio = "American actor known for villainous and charismatic supporting roles."
+            ShortBio = "American actor known for villainous and charismatic supporting roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTI5NzA2NTE0NF5BMl5BanBnXkFtZTcwNzAxMTUxMw@@._V1_FMjpg_UX309_.jpg"
         },
         new Actor()
         {
             Id = new Guid("5429c902-48d3-4dec-beac-49f37ff0b08d"),
             Name = "Bob Gunton",
-            ShortBio = "American actor known for stern, commanding supporting roles."
+            ShortBio = "American actor known for stern, commanding supporting roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BOWQ1ZTI1ZDgtMjhmZC00OWExLTliNWQtNzgxNTExZWIwMDJkXkEyXkFqcGc@._V1_FMjpg_UY4811_.jpg"
         },
         new Actor()
         {
@@ -151,13 +161,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("8441360b-3bb9-4f58-86c1-02dd3f04072a"),
             Name = "Brad Pitt",
-            ShortBio = "American actor known for leading roles in dramas, thrillers, and action films."
+            ShortBio = "American actor known for leading roles in dramas, thrillers, and action films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("f9e3238a-97a1-4718-ab92-31d5236547b3"),
             Name = "Bradley Cooper",
-            ShortBio = "American actor known for comedies, dramas, and award-nominated performances."
+            ShortBio = "American actor known for comedies, dramas, and award-nominated performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BY2YwYjg4NjItZGFjNC00NzgzLWJhMTktYTZmODlmM2Y4ODJjXkEyXkFqcGc@._V1_FMjpg_UY5000_.jpg"
         },
         new Actor()
         {
@@ -176,13 +188,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("411fdf1d-ff3a-490c-86ac-ef8252b5c0fa"),
             Name = "Cameron Diaz",
-            ShortBio = "American actress known for romantic comedies, action, and comedic roles."
+            ShortBio = "American actress known for romantic comedies, action, and comedic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTkxNTI5NzM4MV5BMl5BanBnXkFtZTcwMTI3ODY3Mg@@._V1_FMjpg_UX271_.jpg"
         },
         new Actor()
         {
             Id = new Guid("8dcde184-4ee9-4ac3-8a01-e8827834d161"),
             Name = "Carrie-Anne Moss",
-            ShortBio = "Canadian actress known for science fiction, thrillers, and television dramas."
+            ShortBio = "Canadian actress known for science fiction, thrillers, and television dramas.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTYxMjgwNzEwOF5BMl5BanBnXkFtZTcwNTQ0NzI5Ng@@._V1_QL75_UY414_CR17,0,280,414_.jpg"
         },
         new Actor()
         {
@@ -231,31 +245,36 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("32ac45d4-37c1-4f8c-9c9c-20e9cea6a21d"),
             Name = "Chris Tucker",
-            ShortBio = "American comedian and actor known for high-energy comedic performances."
+            ShortBio = "American comedian and actor known for high-energy comedic performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTc4NjAxMjQwMF5BMl5BanBnXkFtZTYwMzcxOTg0._V1_FMjpg_UX291_.jpg"
         },
         new Actor()
         {
             Id = new Guid("d1bdcd3f-a8be-4044-96b4-26a0745585e9"),
             Name = "Christian Bale",
-            ShortBio = "English actor known for transformative performances in dramas and blockbusters."
+            ShortBio = "English actor known for transformative performances in dramas and blockbusters.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTkxMzk4MjQ4MF5BMl5BanBnXkFtZTcwMzExODQxOA@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("8b3378bc-3e09-4921-9466-7bf8b3108211"),
             Name = "Christina Applegate",
-            ShortBio = "American actress known for sharp comedic roles in film and television."
+            ShortBio = "American actress known for sharp comedic roles in film and television.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTk2NDc2OTE2Nl5BMl5BanBnXkFtZTcwMTc4NDcxNg@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("be6e3a70-0dd5-4da8-8534-4a208c09a614"),
             Name = "Christopher Mintz-Plasse",
-            ShortBio = "American actor known for comedic supporting roles in youth-oriented films."
+            ShortBio = "American actor known for comedic supporting roles in youth-oriented films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTQyNjUzMDk5N15BMl5BanBnXkFtZTcwNzk0Nzk5Mw@@._V1_FMjpg_UX295_.jpg"
         },
         new Actor()
         {
             Id = new Guid("f8124011-adb0-4454-9da7-91f0e182fa33"),
             Name = "Christopher Plummer",
-            ShortBio = "Canadian actor celebrated for distinguished stage and screen performances."
+            ShortBio = "Canadian actor celebrated for distinguished stage and screen performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTU5MzQ5MDY3NF5BMl5BanBnXkFtZTcwNzMxOTU5Ng@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -274,7 +293,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("00085ee6-52df-4585-967b-408c7ba486be"),
             Name = "Daniel Craig",
-            ShortBio = "English actor known for gritty leading roles and the James Bond series."
+            ShortBio = "English actor known for gritty leading roles and the James Bond series.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMjEzMjk4NDU4MF5BMl5BanBnXkFtZTcwMDMyNjQzMg@@._V1_FMjpg_UX269_.jpg"
         },
         new Actor()
         {
@@ -286,7 +306,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("aec03985-5285-415c-b7c2-1245a6751576"),
             Name = "Daniel Stern",
-            ShortBio = "American actor known for comedic film roles and memorable character parts."
+            ShortBio = "American actor known for comedic film roles and memorable character parts.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTI3NTcwNDcxMF5BMl5BanBnXkFtZTcwMTI3Mjc4Mg@@._V1_FMjpg_UX297_.jpg"
         },
         new Actor()
         {
@@ -304,13 +325,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("29843c4b-6c08-4a57-9b36-95264eba65bd"),
             Name = "David Morse",
-            ShortBio = "American actor known for grounded performances in film and television."
+            ShortBio = "American actor known for grounded performances in film and television.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTgwNjUzOTE1N15BMl5BanBnXkFtZTYwNTU4NDQ0._V1_FMjpg_UX273_.jpg"
         },
         new Actor()
         {
             Id = new Guid("0dd7a860-af97-4fe5-86ca-d7b6a171e506"),
             Name = "David Wenham",
-            ShortBio = "Australian actor known for historical epics and character-driven performances."
+            ShortBio = "Australian actor known for historical epics and character-driven performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTI0MjkxOTg1Nl5BMl5BanBnXkFtZTYwNjgyODgz._V1_FMjpg_UX286_.jpg"
         },
         new Actor()
         {
@@ -322,13 +345,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("29ac4686-bfcd-49dc-8646-876522ab6472"),
             Name = "Ed Harris",
-            ShortBio = "American actor known for authoritative roles in dramas, westerns, and thrillers."
+            ShortBio = "American actor known for authoritative roles in dramas, westerns, and thrillers.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMjE4NDM4ODc2OV5BMl5BanBnXkFtZTcwNzA5NjQ5MQ@@._V1_FMjpg_UX289_.jpg"
         },
         new Actor()
         {
             Id = new Guid("483c83dc-0645-46ea-80a7-2f227b5f80cf"),
             Name = "Ed Helms",
-            ShortBio = "American actor and comedian known for awkward, upbeat comedic roles."
+            ShortBio = "American actor and comedian known for awkward, upbeat comedic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTk2MDQwODEwNV5BMl5BanBnXkFtZTcwNjc4MTY0NA@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -340,13 +365,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("bfc71005-46f5-4f0e-a05d-eb99293367d5"),
             Name = "Edward Furlong",
-            ShortBio = "American actor known for breakout roles in 1990s dramas and action films."
+            ShortBio = "American actor known for breakout roles in 1990s dramas and action films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTI1MzgxODkyMl5BMl5BanBnXkFtZTcwNTc1NDIzMQ@@._V1_FMjpg_UX450_.jpg"
         },
         new Actor()
         {
             Id = new Guid("a14ff11b-23f0-402f-ad77-15bdf9eb5a8d"),
             Name = "Edward Norton",
-            ShortBio = "American actor known for cerebral, intense dramatic performances."
+            ShortBio = "American actor known for cerebral, intense dramatic performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTYwNjQ5MTI1NF5BMl5BanBnXkFtZTcwMzU5MTI2Mw@@._V1_FMjpg_UX312_.jpg"
         },
         new Actor()
         {
@@ -358,31 +385,36 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("c7483292-2173-429e-bf47-be27c5dc820b"),
             Name = "Eva Green",
-            ShortBio = "French actress recognized for mysterious, dramatic, and fantasy roles."
+            ShortBio = "French actress recognized for mysterious, dramatic, and fantasy roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTQ0MDA2ODE2Ml5BMl5BanBnXkFtZTcwMjI0Nzc3Nw@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("1d4c8ea4-7f11-453b-8be8-e2218e767055"),
             Name = "Gary Sinise",
-            ShortBio = "American actor known for disciplined, empathetic roles in drama and television."
+            ShortBio = "American actor known for disciplined, empathetic roles in drama and television.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMzE4NzcyMzU3OV5BMl5BanBnXkFtZTYwOTM2NDE2._V1_FMjpg_UX287_.jpg"
         },
         new Actor()
         {
             Id = new Guid("101916e7-e588-499f-829a-daa2793c23e8"),
             Name = "Gerard Butler",
-            ShortBio = "Scottish actor known for action films, thrillers, and dramatic roles."
+            ShortBio = "Scottish actor known for action films, thrillers, and dramatic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMjE4NDMwMzc4Ml5BMl5BanBnXkFtZTcwMDg4Nzg4Mg@@._V1_FMjpg_UX285_.jpg"
         },
         new Actor()
         {
             Id = new Guid("51bab7d6-b37f-40b4-b787-5f6cb30af6f4"),
             Name = "Gwyneth Paltrow",
-            ShortBio = "American actress known for dramas, romances, and character-driven films."
+            ShortBio = "American actress known for dramas, romances, and character-driven films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNzIxOTQ1NTU1OV5BMl5BanBnXkFtZTcwMTQ4MDY0Nw@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("50cafa2b-71bd-4ea8-8eb0-a5ee95eff467"),
             Name = "Heath Ledger",
-            ShortBio = "Australian actor remembered for emotionally rich performances and iconic roles."
+            ShortBio = "Australian actor remembered for emotionally rich performances and iconic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTI2NTY0NzA4MF5BMl5BanBnXkFtZTYwMjE1MDE0._V1_FMjpg_UX267_.jpg"
         },
         new Actor()
         {
@@ -394,19 +426,22 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("539b371e-f3ec-4d09-8add-4072cd23d277"),
             Name = "Helena Bonham Carter",
-            ShortBio = "English actress known for eccentric, gothic, and dramatic roles."
+            ShortBio = "English actress known for eccentric, gothic, and dramatic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTc2OTMxNDIzMF5BMl5BanBnXkFtZTcwNDU1MjA1NA@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("cee50ddf-38c4-40fb-91a3-02bfc7bee4aa"),
             Name = "Henry Cavill",
-            ShortBio = "British actor known for action franchises and heroic screen roles."
+            ShortBio = "British actor known for action franchises and heroic screen roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNWFmNmI2NmYtNDUyYi00MDZhLTk0ZmEtODY0MmM5NGQxMWEwXkEyXkFqcGc@._V1_FMjpg_UX819_.jpg"
         },
         new Actor()
         {
             Id = new Guid("b391372d-3bfd-48e4-be60-c343cc4b4f3f"),
             Name = "Hugh Jackman",
-            ShortBio = "Australian actor known for musicals, dramas, and action franchises."
+            ShortBio = "Australian actor known for musicals, dramas, and action franchises.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNDExMzIzNjk3Nl5BMl5BanBnXkFtZTcwOTE4NDU5OA@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -426,7 +461,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("34ed4fe5-d30b-4edc-a00f-f75f019d46a3"),
             Name = "J.K. Simmons",
-            ShortBio = "American actor known for commanding, versatile performances in film and TV."
+            ShortBio = "American actor known for commanding, versatile performances in film and TV.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMzg2NTI5NzQ1MV5BMl5BanBnXkFtZTgwNjI1NDEwMDI@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -438,7 +474,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("846cc4c2-430e-42e8-b9a8-f3369310563a"),
             Name = "Jackie Chan",
-            ShortBio = "Hong Kong actor and martial artist known for action-comedy stunts."
+            ShortBio = "Hong Kong actor and martial artist known for action-comedy stunts.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTk4MDM0MDUzM15BMl5BanBnXkFtZTcwOTI4MzU1Mw@@._V1_FMjpg_UX288_.jpg"
         },
         new Actor()
         {
@@ -450,13 +487,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("b32c87ff-b412-42d3-bbc1-521841443d40"),
             Name = "Jake Gyllenhaal",
-            ShortBio = "American actor known for intense and versatile dramatic performances."
+            ShortBio = "American actor known for intense and versatile dramatic performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNjA0MTU2NDY3MF5BMl5BanBnXkFtZTgwNDU4ODkzMzE@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("cfde46c5-342f-4560-85d2-493f082e0a01"),
             Name = "James Caan",
-            ShortBio = "American actor known for forceful roles in crime films and dramas."
+            ShortBio = "American actor known for forceful roles in crime films and dramas.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTI5NjkyNDQ3NV5BMl5BanBnXkFtZTcwNjY5NTQ0Mw@@._V1_FMjpg_UX267_.jpg"
         },
         new Actor()
         {
@@ -468,7 +507,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("9af80152-7958-47f9-8f8a-b1394b62bc12"),
             Name = "Javier Bardem",
-            ShortBio = "Spanish actor known for powerful, menacing, and dramatic roles."
+            ShortBio = "Spanish actor known for powerful, menacing, and dramatic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTY1NTc4NTYzMF5BMl5BanBnXkFtZTcwNDIwOTY1NA@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -480,31 +520,36 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("2c4f6a03-d0b1-4e0e-8e5a-d824d9ffa7c7"),
             Name = "Jeff Daniels",
-            ShortBio = "American actor known for both serious dramas and comedic roles."
+            ShortBio = "American actor known for both serious dramas and comedic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BODA3MDI4NDcxNV5BMl5BanBnXkFtZTYwOTgyMzY1._V1_FMjpg_UX266_.jpg"
         },
         new Actor()
         {
             Id = new Guid("bd607b66-67f7-4fa5-8798-56fecc7d83e8"),
             Name = "Jennifer Aniston",
-            ShortBio = "American actress known for television, romantic comedies, and light dramas."
+            ShortBio = "American actress known for television, romantic comedies, and light dramas.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNjk1MjIxNjUxNF5BMl5BanBnXkFtZTcwODk2NzM4Mg@@._V1_FMjpg_UX279_.jpg"
         },
         new Actor()
         {
             Id = new Guid("b30648a8-3bfe-43be-bc09-65caf669fb09"),
             Name = "Jennifer Connelly",
-            ShortBio = "American actress known for emotionally rich performances in drama and fantasy."
+            ShortBio = "American actress known for emotionally rich performances in drama and fantasy.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNGMwYmU3MTAtYjcyOC00NGMzLTgzYzItMTc4YzQwNzNhYjRmXkEyXkFqcGc@._V1_FMjpg_UY2723_.jpg"
         },
         new Actor()
         {
             Id = new Guid("44907d33-053a-47f7-ac1b-a2fddbbea5cc"),
             Name = "Jesse Eisenberg",
-            ShortBio = "American actor known for fast-talking, intellectual dramatic roles."
+            ShortBio = "American actor known for fast-talking, intellectual dramatic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNTE3MzQzODE3OV5BMl5BanBnXkFtZTcwMDE0ODY1NA@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("362cae35-adc0-4ad9-8ff5-8a6603edf315"),
             Name = "Jim Carrey",
-            ShortBio = "Canadian-American actor famous for elastic comedy and dramatic reinvention."
+            ShortBio = "Canadian-American actor famous for elastic comedy and dramatic reinvention.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -517,19 +562,22 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("d1c69566-30fd-47b2-9128-b7aadd4722a1"),
             Name = "Jodie Foster",
-            ShortBio = "American actress known for intelligent, intense performances."
+            ShortBio = "American actress known for intelligent, intense performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTM3MjgyOTQwNF5BMl5BanBnXkFtZTcwMDczMzEwNA@@._V1_FMjpg_UX274_.jpg"
         },
         new Actor()
         {
             Id = new Guid("d70a393d-94ed-424f-ad8f-b0a041617c52"),
             Name = "Joe Pesci",
-            ShortBio = "American actor known for intense crime roles and sharp comedic turns."
+            ShortBio = "American actor known for intense crime roles and sharp comedic turns.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMzc3MTcxNDYxNV5BMl5BanBnXkFtZTcwOTI3NjE1Mw@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("e1d47d6f-e0e3-4214-b4f7-21b37d6db88d"),
             Name = "John C. Reilly",
-            ShortBio = "American actor known for dramatic range and distinctive comedic performances."
+            ShortBio = "American actor known for dramatic range and distinctive comedic performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTc5MTMyMzUwM15BMl5BanBnXkFtZTgwMTgwMjExNzM@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -541,25 +589,29 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("1251c5c5-0fdd-40c1-89d7-0e10b338300c"),
             Name = "Jonah Hill",
-            ShortBio = "American actor, writer, and producer known for comedy and dramatic turns."
+            ShortBio = "American actor, writer, and producer known for comedy and dramatic turns.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTUyNDU0NzAwNl5BMl5BanBnXkFtZTcwMzQxMzIzNw@@._V1_FMjpg_UX460_.jpg"
         },
         new Actor()
         {
             Id = new Guid("9ff68d83-fc39-4081-ae3f-06ef755711d3"),
             Name = "Josh Brolin",
-            ShortBio = "American actor known for rugged performances in crime, western, and superhero films."
+            ShortBio = "American actor known for rugged performances in crime, western, and superhero films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTQ1MzYyMjQ0Nl5BMl5BanBnXkFtZTcwMTA0ODkyMg@@._V1_FMjpg_UX266_.jpg"
         },
         new Actor()
         {
             Id = new Guid("263f806e-5bb0-4cc5-bdc1-a6130e3a6ae7"),
             Name = "Justin Timberlake",
-            ShortBio = "American singer and actor known for stylish supporting roles in drama and comedy."
+            ShortBio = "American singer and actor known for stylish supporting roles in drama and comedy.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTUwMjE1MjU2N15BMl5BanBnXkFtZTcwNjk0ODY1NA@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("084b109f-15d5-473a-9baa-ab748f461af5"),
             Name = "Kate Winslet",
-            ShortBio = "English actress known for emotionally precise performances in drama and romance."
+            ShortBio = "English actress known for emotionally precise performances in drama and romance.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BODgzMzM2NTE0Ml5BMl5BanBnXkFtZTcwMTcyMTkyOQ@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -572,25 +624,29 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("bf824b1f-8c4d-4be3-9566-dee5b7e512b0"),
             Name = "Lauren Holly",
-            ShortBio = "American-Canadian actress known for film, television, and romantic comedies."
+            ShortBio = "American-Canadian actress known for film, television, and romantic comedies.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BN2JjYThiNTQtZmUwYy00MDliLWE4NmQtNjc0ZDNlMzJkNTZkXkEyXkFqcGc@._V1_FMjpg_UX2160_.jpg"
         },
         new Actor()
         {
             Id = new Guid("f80c0da1-8be6-4a46-a578-edfce3af270d"),
             Name = "Laurence Fishburne",
-            ShortBio = "American actor known for authoritative performances in film, TV, and theater."
+            ShortBio = "American actor known for authoritative performances in film, TV, and theater.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTc0NjczNDc1MV5BMl5BanBnXkFtZTYwMDU0Mjg1._V1_FMjpg_UX267_.jpg"
         },
         new Actor()
         {
             Id = new Guid("3998723a-ebb9-4e63-a96b-8575e5345e5b"),
             Name = "Lena Headey",
-            ShortBio = "English actress known for intense roles in fantasy, drama, and action."
+            ShortBio = "English actress known for intense roles in fantasy, drama, and action.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMzIwMjIwNjg0M15BMl5BanBnXkFtZTgwOTI3MDEzMDE@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("a5381bf5-482b-4f12-9d17-d10e8fcb6fc1"),
             Name = "Leonardo DiCaprio",
-            ShortBio = "American actor known for ambitious roles in major dramas and thrillers."
+            ShortBio = "American actor known for ambitious roles in major dramas and thrillers.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_FMjpg_UX297_.jpg"
         },
         new Actor()
         {
@@ -608,13 +664,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("453399e4-7c51-46d3-aeae-99eb8f06fef9"),
             Name = "Linda Hamilton",
-            ShortBio = "American actress best known for tough, resilient action roles."
+            ShortBio = "American actress best known for tough, resilient action roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BZTI1MmRmYmMtYTZiMy00NGFkLThkMGEtNjgyYjFhMzE2NjUzXkEyXkFqcGc@._V1_FMjpg_UY3456_.jpg"
         },
         new Actor()
         {
             Id = new Guid("84982976-ae90-4237-9520-d6239df1458d"),
             Name = "Lindsay Lohan",
-            ShortBio = "American actress known for teen comedies and coming-of-age films."
+            ShortBio = "American actress known for teen comedies and coming-of-age films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BN2VmNGZjNmItOTQ2Zi00ZjVhLWI2ZGItYzNiMzQ2NjVhZTYxXkEyXkFqcGc@._V1_FMjpg_UX921_.jpg"
         },
         new Actor()
         {
@@ -626,25 +684,29 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("fed28090-372d-456f-9a1e-c207058ac144"),
             Name = "Macaulay Culkin",
-            ShortBio = "American actor known for iconic child performances in family comedies."
+            ShortBio = "American actor known for iconic child performances in family comedies.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTM1NzUwMjY2M15BMl5BanBnXkFtZTcwOTI5MTMyMw@@._V1_FMjpg_UX399_.jpg"
         },
         new Actor()
         {
             Id = new Guid("086a28bc-461c-4360-90e6-d34634bc7930"),
             Name = "Mads Mikkelsen",
-            ShortBio = "Danish actor known for chilling villains and acclaimed dramatic performances."
+            ShortBio = "Danish actor known for chilling villains and acclaimed dramatic performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTcyMTU5MzgxMF5BMl5BanBnXkFtZTYwMDI0NjI1._V1_FMjpg_UX267_.jpg"
         },
         new Actor()
         {
             Id = new Guid("18638236-cb2e-4892-befc-cf0068444068"),
             Name = "Mark Ruffalo",
-            ShortBio = "American actor known for thoughtful performances in dramas and ensemble films."
+            ShortBio = "American actor known for thoughtful performances in dramas and ensemble films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BM2JiYzA0ZGItNmFhYy00MjIyLWEwN2QtMzRmNDUyNjNiZjBiXkEyXkFqcGc@._V1_FMjpg_UY7360_.jpg"
         },
         new Actor()
         {
             Id = new Guid("38ebb771-b41b-43c4-ae42-d5da412e04d9"),
             Name = "Marlon Brando",
-            ShortBio = "American actor regarded as one of cinema’s most influential performers."
+            ShortBio = "American actor regarded as one of cinema’s most influential performers.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTg3MDYyMDE5OF5BMl5BanBnXkFtZTcwNjgyNTEzNA@@._V1_FMjpg_UX1023_.jpg"
         },
         new Actor()
         {
@@ -656,7 +718,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("d31a1794-c533-4a9a-85a9-d90e3390c8dd"),
             Name = "Mary Steenburgen",
-            ShortBio = "American actress known for warm, versatile performances in film and TV."
+            ShortBio = "American actress known for warm, versatile performances in film and TV.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTk1OTI5OTc0Nl5BMl5BanBnXkFtZTcwNjc5NDMwNA@@._V1_FMjpg_UX305_.jpg"
         },
         new Actor()
         {
@@ -674,13 +737,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("0a1a093a-54e3-454d-86f9-73523144b49d"),
             Name = "Michael Cera",
-            ShortBio = "Canadian actor known for understated comic timing and indie films."
+            ShortBio = "Canadian actor known for understated comic timing and indie films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNTgyNDgxMjUyOV5BMl5BanBnXkFtZTcwMDYxNzY1OQ@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("61cfb611-b7b6-4a63-8edc-7183a7a2dc35"),
             Name = "Michael Clarke Duncan",
-            ShortBio = "American actor known for imposing yet gentle dramatic roles."
+            ShortBio = "American actor known for imposing yet gentle dramatic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTI3NDY2ODk5OV5BMl5BanBnXkFtZTYwMjQ0NzE0._V1_FMjpg_UX340_.jpg"
         },
         new Actor()
         {
@@ -693,13 +758,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("990f0803-c80f-40cf-9d02-910e3d46a962"),
             Name = "Mila Kunis",
-            ShortBio = "American actress known for comedy, drama, and psychological thrillers."
+            ShortBio = "American actress known for comedy, drama, and psychological thrillers.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BODQyNTQyNzY4MV5BMl5BanBnXkFtZTcwODg5MDA3MQ@@._V1_FMjpg_UX334_.jpg"
         },
         new Actor()
         {
             Id = new Guid("0863f099-87d9-4590-8a19-083384c1aa91"),
             Name = "Miles Teller",
-            ShortBio = "American actor known for youthful dramatic roles and intense performances."
+            ShortBio = "American actor known for youthful dramatic roles and intense performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNWI3YWY1NWQtNDVhMy00ZWE1LWI2MzUtOTczNTg5MTllZmNjXkEyXkFqcGc@._V1_FMjpg_UY3611_.jpg"
         },
         new Actor()
         {
@@ -717,7 +784,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("0dc023ca-c84f-4c6b-a1c3-ed3ca625b7bd"),
             Name = "Morgan Freeman",
-            ShortBio = "American actor known for authoritative, warm performances across genres."
+            ShortBio = "American actor known for authoritative, warm performances across genres.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2OF5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_FMjpg_UX267_.jpg"
         },
         new Actor()
         {
@@ -729,13 +797,15 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("f2dfcabe-52e1-4e25-84f2-054cc9f9a772"),
             Name = "Natalie Portman",
-            ShortBio = "Israeli-American actress known for dramatic, psychological, and sci-fi roles."
+            ShortBio = "Israeli-American actress known for dramatic, psychological, and sci-fi roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNjk1M2RmODAtMjE0Ny00N2U0LWIwNWYtZTAxMDFiMzk1MjU5XkEyXkFqcGc@._V1_FMjpg_UY4000_.jpg"
         },
         new Actor()
         {
             Id = new Guid("545d9868-b224-46c4-9b60-21271dc2adc2"),
             Name = "Neil Patrick Harris",
-            ShortBio = "American actor known for comedy, stage work, and dramatic supporting roles."
+            ShortBio = "American actor known for comedy, stage work, and dramatic supporting roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTUxNjQ4MjU5Ml5BMl5BanBnXkFtZTcwMTY5NzAzNw@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -766,55 +836,64 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("f3d34bfd-85e1-4dec-bc22-5f4eca6c9fc2"),
             Name = "Paul Dano",
-            ShortBio = "American actor known for nuanced roles in indie films and major dramas."
+            ShortBio = "American actor known for nuanced roles in indie films and major dramas.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMjMwMzE1OTc0OF5BMl5BanBnXkFtZTcwMDU2NTg0Nw@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("3c328dc2-54a1-4a48-8962-6e7f903f2162"),
             Name = "Paul Reiser",
-            ShortBio = "American actor and comedian known for television and supporting film roles."
+            ShortBio = "American actor and comedian known for television and supporting film roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTQ1MjUwMjI4M15BMl5BanBnXkFtZTcwNzc0NTg3NA@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("ef1f2981-782a-40c7-b0dc-5e6a85bb7055"),
             Name = "Peter Riegert",
-            ShortBio = "American actor known for character roles in comedies and dramas."
+            ShortBio = "American actor known for character roles in comedies and dramas.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTc2Nzc4NzkyNF5BMl5BanBnXkFtZTcwMjE0ODQyOA@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("9af1c7b4-2511-48e0-8868-fc0dab590d71"),
             Name = "Rachel McAdams",
-            ShortBio = "Canadian actress known for charismatic performances in dramas and comedies."
+            ShortBio = "Canadian actress known for charismatic performances in dramas and comedies.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTY5ODcxMDU4NV5BMl5BanBnXkFtZTcwMjAzNjQyNQ@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("70705055-5ce6-4a88-a3ba-5e031ae9b786"),
             Name = "Rebecca Ferguson",
-            ShortBio = "Swedish actress known for suspenseful performances in action and drama."
+            ShortBio = "Swedish actress known for suspenseful performances in action and drama.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMDVlZjIzOTktYzNmZC00MjIzLTk1YTMtMzdlOTFiNzQ3ZGY0XkEyXkFqcGc@._V1_FMjpg_UX406_.jpg"
         },
         new Actor()
         {
             Id = new Guid("9c39c7a7-3897-494b-a8b5-970dd50d88b6"),
             Name = "Rene Russo",
-            ShortBio = "American actress known for thrillers, dramas, and sharp character roles."
+            ShortBio = "American actress known for thrillers, dramas, and sharp character roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMjIyMzc1Njk5N15BMl5BanBnXkFtZTgwMjk2MDkyNzM@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("8ba7acf6-a509-48fe-92c0-c8c0528569fd"),
             Name = "Riz Ahmed",
-            ShortBio = "British actor and musician known for intense performances across film and TV."
+            ShortBio = "British actor and musician known for intense performances across film and TV.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTcxMTQ4MzY2Nl5BMl5BanBnXkFtZTgwMzAxOTY3MjI@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("09ad1d06-e8a1-406e-890b-d744e67ffa76"),
             Name = "Robert De Niro",
-            ShortBio = "American actor known for legendary performances in crime films and dramas."
+            ShortBio = "American actor known for legendary performances in crime films and dramas.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMjAwNDU3MzcyOV5BMl5BanBnXkFtZTcwMjc0MTIxMw@@._V1_FMjpg_UX303_.jpg"
         },
         new Actor()
         {
             Id = new Guid("d875ff93-4c8d-4470-9c2e-66209c6d63f2"),
             Name = "Robert Downey Jr.",
-            ShortBio = "American actor known for charismatic performances in drama, comedy, and superhero films."
+            ShortBio = "American actor known for charismatic performances in drama, comedy, and superhero films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -826,19 +905,22 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("ba291cbf-a1f6-4a18-bfa8-fb2a3c299e6f"),
             Name = "Robin Wright",
-            ShortBio = "American actress known for emotionally grounded performances in film and television."
+            ShortBio = "American actress known for emotionally grounded performances in film and television.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTU0NTc4MzEyOV5BMl5BanBnXkFtZTcwODY0ODkzMQ@@._V1_FMjpg_UX280_.jpg"
         },
         new Actor()
         {
             Id = new Guid("57ad6e92-9f65-4871-b922-11600447149c"),
             Name = "Rooney Mara",
-            ShortBio = "American actress known for intense, understated dramatic performances."
+            ShortBio = "American actress known for intense, understated dramatic performances.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BZGIwMGJlNTctMjE2Zi00YzFlLTk3MjQtMTMzNzFlOWYyNzJhXkEyXkFqcGc@._V1_FMjpg_UY3712_.jpg"
         },
         new Actor()
         {
             Id = new Guid("25538521-d4f1-4ca8-ba20-1628c98b6930"),
             Name = "Rosamund Pike",
-            ShortBio = "English actress known for intelligent, composed performances in thrillers and dramas."
+            ShortBio = "English actress known for intelligent, composed performances in thrillers and dramas.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BNDQ5MDIyMjg3NV5BMl5BanBnXkFtZTgwOTU2NTE0NDM@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -875,7 +957,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("fcece400-14b5-481a-b5d7-fe67bf28f913"),
             Name = "Scott Glenn",
-            ShortBio = "American actor known for rugged roles in thrillers, dramas, and westerns."
+            ShortBio = "American actor known for rugged roles in thrillers, dramas, and westerns.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTU3NzAwMzE1OF5BMl5BanBnXkFtZTYwMjkzOTY0._V1_FMjpg_UX303_.jpg"
         },
         new Actor()
         {
@@ -893,7 +976,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("10ba4f1b-fb6f-4040-a38a-1de45d9d7605"),
             Name = "Steve Carell",
-            ShortBio = "American actor and comedian known for awkward, lovable comedic characters."
+            ShortBio = "American actor and comedian known for awkward, lovable comedic characters.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMjMyOTM2OTk1Ml5BMl5BanBnXkFtZTgwMTI3MzkyNjM@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -905,19 +989,22 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("12b4e8b1-deee-4931-baa3-bc4d5f3efb9b"),
             Name = "Tim Robbins",
-            ShortBio = "American actor known for thoughtful performances in dramas and political films."
+            ShortBio = "American actor known for thoughtful performances in dramas and political films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTI1OTYxNzAxOF5BMl5BanBnXkFtZTYwNTE5ODI4._V1_FMjpg_UX311_.jpg"
         },
         new Actor()
         {
             Id = new Guid("6547e436-757f-4cb1-a179-f337b0922121"),
             Name = "Tom Cruise",
-            ShortBio = "American actor and producer known for blockbuster action and dramatic roles."
+            ShortBio = "American actor and producer known for blockbuster action and dramatic roles.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMmU1YWU1NmMtMjAyMi00MjFiLWFmZmUtOTc1ZjI5ODkxYmQyXkEyXkFqcGc@._V1_FMjpg_UY5122_.jpg"
         },
         new Actor()
         {
             Id = new Guid("ad15e2ca-4491-413c-a95b-8b2cc8935c4c"),
             Name = "Tom Hanks",
-            ShortBio = "American actor known for warm, versatile performances in dramas and comedies."
+            ShortBio = "American actor known for warm, versatile performances in dramas and comedies.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTQ2MjMwNDA3Nl5BMl5BanBnXkFtZTcwMTA2NDY3NQ@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -942,7 +1029,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("556360a7-3f73-48c6-b971-52ff34371b93"),
             Name = "Tommy Lee Jones",
-            ShortBio = "American actor known for stoic performances in dramas, thrillers, and westerns."
+            ShortBio = "American actor known for stoic performances in dramas, thrillers, and westerns.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTkyNjc4MDc0OV5BMl5BanBnXkFtZTcwOTc5OTUwOQ@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
@@ -954,7 +1042,8 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("e337f1ec-b22c-4ddf-8b5e-bd5afa946129"),
             Name = "Tzi Ma",
-            ShortBio = "Hong Kong-American actor known for supporting roles in film and television."
+            ShortBio = "Hong Kong-American actor known for supporting roles in film and television.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BZDhhOWZhMDctNTQ0Yy00Zjc0LWIwZTgtZTY0ZmI0Nzg4ZDQ4XkEyXkFqcGc@._V1_FMjpg_UY2434_.jpg"
         },
         new Actor()
         {
@@ -966,25 +1055,29 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         {
             Id = new Guid("08d54a07-c4a3-4467-8c2d-2791ccc3cb86"),
             Name = "Vincent Cassel",
-            ShortBio = "French actor known for intense roles in international dramas and thrillers."
+            ShortBio = "French actor known for intense roles in international dramas and thrillers.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTc1NDUzMzM5MV5BMl5BanBnXkFtZTcwNzY1OTYyOQ@@._V1_FMjpg_UY2048_.jpg"
         },
         new Actor()
         {
             Id = new Guid("a1c457e5-d6b5-4fce-81a1-e570ebca481a"),
             Name = "Will Ferrell",
-            ShortBio = "American comedian and actor known for broad, improvisational comedy."
+            ShortBio = "American comedian and actor known for broad, improvisational comedy.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTMxMDIzMDEzNF5BMl5BanBnXkFtZTcwODcxMjE2Mg@@._V1_FMjpg_UX276_.jpg"
         },
         new Actor()
         {
             Id = new Guid("0f0f48ae-983b-48b1-a574-a8dc4f6ace0b"),
             Name = "Zach Galifianakis",
-            ShortBio = "American comedian and actor known for offbeat and eccentric characters."
+            ShortBio = "American comedian and actor known for offbeat and eccentric characters.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMTQwNzI3NjIwMV5BMl5BanBnXkFtZTcwMzA1OTIwMw@@._V1_FMjpg_UX273_.jpg"
         },
         new Actor()
         {
             Id = new Guid("dc4a4b36-d647-43f9-b215-1a6024cc712f"),
             Name = "Zazie Beetz",
-            ShortBio = "German-American actress known for energetic roles in drama, comedy, and genre films."
+            ShortBio = "German-American actress known for energetic roles in drama, comedy, and genre films.",
+            ImageUrl = "https://m.media-amazon.com/images/M/MV5BMDdlNjNkZTAtNWQ0Ny00ZDdiLWJlM2EtYzYxMjMyY2U2MjgxXkEyXkFqcGc@._V1_FMjpg_UX904_.jpg"
         },
         new Actor()
         {

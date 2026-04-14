@@ -14,6 +14,9 @@ public class Movie
     [Comment("Movie Genre")]
     public string Genre { get; set; } = null!;
     
+    [Comment("Movie Rating")]
+    public float Rating { get; set; }
+    
     [Comment("Movie Full Description")]
     public string Description { get; set; } = null!;
 

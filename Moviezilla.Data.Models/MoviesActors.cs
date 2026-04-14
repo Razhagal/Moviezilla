@@ -2,6 +2,8 @@
 
 namespace Moviezilla.Data.Models;
 
+// TODO: Add role type - Main or Supporting
+
 [Comment("Movies and Actors Joint Table")]
 public class MoviesActors
 {
