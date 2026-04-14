@@ -1117,6 +1117,366 @@ public class MoviesActorsConfiguration :IEntityTypeConfiguration<MoviesActors>
             MovieId = new Guid("5c3f62e1-a6ca-4286-9cb3-5cbc0afc3d8b"),
             ActorId = new Guid("bfad936e-bf67-4b44-8a27-88606204e79e"),
             CharacterName = "Drax"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("885e7b27-c1c2-4ab8-8a6c-f676ecec60df"),
+            ActorId = new Guid("4b7fe159-069a-4c8f-8bd3-09ed79a4c5ae"),
+            CharacterName = "Frodo Baggins"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("885e7b27-c1c2-4ab8-8a6c-f676ecec60df"),
+            ActorId = new Guid("f03b85c5-d584-4d0b-8d38-d7356f469375"),
+            CharacterName = "Gandalf"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("885e7b27-c1c2-4ab8-8a6c-f676ecec60df"),
+            ActorId = new Guid("d1fb6849-f352-4e51-a01c-e98b0f67fc40"),
+            CharacterName = "Aragorn"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("c6c210c2-c80b-474e-9d97-2751200097ae"),
+            ActorId = new Guid("4b7fe159-069a-4c8f-8bd3-09ed79a4c5ae"),
+            CharacterName = "Frodo Baggins"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("c6c210c2-c80b-474e-9d97-2751200097ae"),
+            ActorId = new Guid("f03b85c5-d584-4d0b-8d38-d7356f469375"),
+            CharacterName = "Gandalf"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("c6c210c2-c80b-474e-9d97-2751200097ae"),
+            ActorId = new Guid("d1fb6849-f352-4e51-a01c-e98b0f67fc40"),
+            CharacterName = "Aragorn"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("bd56340e-eea7-4e83-9b69-6ede4a939bd8"),
+            ActorId = new Guid("4b7fe159-069a-4c8f-8bd3-09ed79a4c5ae"),
+            CharacterName = "Frodo Baggins"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("bd56340e-eea7-4e83-9b69-6ede4a939bd8"),
+            ActorId = new Guid("d1fb6849-f352-4e51-a01c-e98b0f67fc40"),
+            CharacterName = "Aragorn"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("bd56340e-eea7-4e83-9b69-6ede4a939bd8"),
+            ActorId = new Guid("b96f5e3e-e5c2-4005-93ba-14a6db7078b9"),
+            CharacterName = "Samwise Gamgee"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("2a90d8b6-82d8-4581-9fa7-ecaa5832dc26"),
+            ActorId = new Guid("950268ca-c69a-41f4-81c3-7cd61c42a9e1"),
+            CharacterName = "Harry Potter"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("2a90d8b6-82d8-4581-9fa7-ecaa5832dc26"),
+            ActorId = new Guid("1acc5129-33a7-4b35-b00b-f350c34c0b83"),
+            CharacterName = "Hermione Granger"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("2a90d8b6-82d8-4581-9fa7-ecaa5832dc26"),
+            ActorId = new Guid("82d8d010-92a5-4189-b947-d56faf569ba6"),
+            CharacterName = "Ron Weasley"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("cb8a9632-001b-464e-905c-2a0062f1bcaf"),
+            ActorId = new Guid("950268ca-c69a-41f4-81c3-7cd61c42a9e1"),
+            CharacterName = "Harry Potter"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("cb8a9632-001b-464e-905c-2a0062f1bcaf"),
+            ActorId = new Guid("1acc5129-33a7-4b35-b00b-f350c34c0b83"),
+            CharacterName = "Hermione Granger"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("cb8a9632-001b-464e-905c-2a0062f1bcaf"),
+            ActorId = new Guid("95a09f9f-98a1-4a0b-a409-6a357ceb9930"),
+            CharacterName = "Sirius Black"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("2fad653d-7cde-4b92-a5e8-a3928570f756"),
+            ActorId = new Guid("339a12ea-c0b1-4c15-81eb-189212eda79d"),
+            CharacterName = "Ofelia"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("2fad653d-7cde-4b92-a5e8-a3928570f756"),
+            ActorId = new Guid("4f53bb1c-0f91-48bc-9876-5dfd7ab74ebb"),
+            CharacterName = "Captain Vidal"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("2fad653d-7cde-4b92-a5e8-a3928570f756"),
+            ActorId = new Guid("93088ce9-c00a-4ea4-9cd6-2ac02db77c7d"),
+            CharacterName = "Mercedes"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("9d0944ab-9bfa-4345-8ee6-6f52787b19c4"),
+            ActorId = new Guid("96c08023-9ed3-46dd-a016-facb34a4bef9"),
+            CharacterName = "Bilbo Baggins"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("9d0944ab-9bfa-4345-8ee6-6f52787b19c4"),
+            ActorId = new Guid("f03b85c5-d584-4d0b-8d38-d7356f469375"),
+            CharacterName = "Gandalf"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("9d0944ab-9bfa-4345-8ee6-6f52787b19c4"),
+            ActorId = new Guid("f5faf27e-6f57-4035-a94e-1055cd927ed1"),
+            CharacterName = "Thorin Oakenshield"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("623d306a-95f7-48f7-9f09-aa298685ac3b"),
+            ActorId = new Guid("5f3878b6-e371-4be2-afcb-10906290b75a"),
+            CharacterName = "Captain Jack Sparrow"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("623d306a-95f7-48f7-9f09-aa298685ac3b"),
+            ActorId = new Guid("e2100a6d-cc7d-47c9-9927-72082d1b3843"),
+            CharacterName = "Will Turner"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("623d306a-95f7-48f7-9f09-aa298685ac3b"),
+            ActorId = new Guid("858afe84-3e5a-451b-bd2d-eda7f38e8467"),
+            CharacterName = "Elizabeth Swann"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("4ab20a27-63b5-42ee-a9de-aef4b0866153"),
+            ActorId = new Guid("0415474f-6528-4602-9803-b387d67b5b5d"),
+            CharacterName = "Lucy Pevensie"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("4ab20a27-63b5-42ee-a9de-aef4b0866153"),
+            ActorId = new Guid("1a536677-8b72-42dc-b7ec-506ab25c501f"),
+            CharacterName = "White Witch"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("4ab20a27-63b5-42ee-a9de-aef4b0866153"),
+            ActorId = new Guid("3c550829-e360-4a0f-947f-b8510e01718a"),
+            CharacterName = "Mr. Tumnus"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("441db5ba-a442-43f9-8e18-363cf678f5d2"),
+            ActorId = new Guid("ca837102-6e0b-4bc6-a39c-d35bbc3dfa80"),
+            CharacterName = "Tristan Thorn"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("441db5ba-a442-43f9-8e18-363cf678f5d2"),
+            ActorId = new Guid("13ec26d4-e9fc-4def-ae21-f93ab8d4d6b6"),
+            CharacterName = "Yvaine"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("441db5ba-a442-43f9-8e18-363cf678f5d2"),
+            ActorId = new Guid("dc2957ed-c6dc-40c6-8dcb-8e93bdd8ba03"),
+            CharacterName = "Lamia"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("9e1126ac-ddca-4012-9204-8d0480e417d1"),
+            ActorId = new Guid("a5381bf5-482b-4f12-9d17-d10e8fcb6fc1"),
+            CharacterName = "Cobb"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("9e1126ac-ddca-4012-9204-8d0480e417d1"),
+            ActorId = new Guid("09b7ed63-7445-4c20-b6cf-271ddb9e4c96"),
+            CharacterName = "Arthur"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("9e1126ac-ddca-4012-9204-8d0480e417d1"),
+            ActorId = new Guid("59d617f1-c06c-4dd0-8b8b-ad0fd2615135"),
+            CharacterName = "Ariadne"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("6851194f-61a0-4df1-8e89-2030ca47fe24"),
+            ActorId = new Guid("00cdc0aa-e696-4628-b8cc-ec84f4a6dc06"),
+            CharacterName = "Cooper"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("6851194f-61a0-4df1-8e89-2030ca47fe24"),
+            ActorId = new Guid("cac1fee0-fd3a-47f8-b629-cb9b65d68b2c"),
+            CharacterName = "Brand"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("6851194f-61a0-4df1-8e89-2030ca47fe24"),
+            ActorId = new Guid("40f67ef1-8703-42e9-94af-f65e1a2ef186"),
+            CharacterName = "Murph"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("63c3517c-d626-4181-a444-0adeeb056878"),
+            ActorId = new Guid("b479a3b8-5eba-43f0-a77c-797fc760ab1f"),
+            CharacterName = "K"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("63c3517c-d626-4181-a444-0adeeb056878"),
+            ActorId = new Guid("36e4bf12-895e-44a2-b635-e9e7930c0997"),
+            CharacterName = "Rick Deckard"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("63c3517c-d626-4181-a444-0adeeb056878"),
+            ActorId = new Guid("dae9df12-f329-45e4-b256-a7e9646e838d"),
+            CharacterName = "Joi"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("e96c3640-af75-4342-bf73-2c249993f934"),
+            ActorId = new Guid("1b39c2ef-208c-4e08-b668-a533d279d528"),
+            CharacterName = "Ripley"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("e96c3640-af75-4342-bf73-2c249993f934"),
+            ActorId = new Guid("a41a0cad-77db-47cc-a5a0-0d57342a9b65"),
+            CharacterName = "Dallas"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("e96c3640-af75-4342-bf73-2c249993f934"),
+            ActorId = new Guid("c3891de0-0cda-41bc-a2ae-e957df3d0f1a"),
+            CharacterName = "Kane"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("a4a49163-f174-4a42-9f88-1f1b30325ef5"),
+            ActorId = new Guid("1b39c2ef-208c-4e08-b668-a533d279d528"),
+            CharacterName = "Ripley"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("a4a49163-f174-4a42-9f88-1f1b30325ef5"),
+            ActorId = new Guid("c55c41c7-9a4d-40d2-b2fc-57eb139bf902"),
+            CharacterName = "Corporal Hicks"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("a4a49163-f174-4a42-9f88-1f1b30325ef5"),
+            ActorId = new Guid("a8360aca-2aa9-49da-925b-af9deaa40978"),
+            CharacterName = "Newt"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("13f91c44-a819-49c8-8ed3-3c003171ddc3"),
+            ActorId = new Guid("c9ee97ea-de38-4ce6-add4-ebc54fd7d92a"),
+            CharacterName = "Louise Banks"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("13f91c44-a819-49c8-8ed3-3c003171ddc3"),
+            ActorId = new Guid("ff728ce9-28c4-4e30-9e50-bd0e7fba3b39"),
+            CharacterName = "Ian Donnelly"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("13f91c44-a819-49c8-8ed3-3c003171ddc3"),
+            ActorId = new Guid("a5f19f18-702b-49cb-8e8a-634045a81baa"),
+            CharacterName = "Colonel Weber"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("5b248551-840b-4632-8aaf-3e1b16252d65"),
+            ActorId = new Guid("bdb9ef82-f830-4d22-96ea-7128d9fd92b7"),
+            CharacterName = "Mark Watney"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("5b248551-840b-4632-8aaf-3e1b16252d65"),
+            ActorId = new Guid("40f67ef1-8703-42e9-94af-f65e1a2ef186"),
+            CharacterName = "Melissa Lewis"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("5b248551-840b-4632-8aaf-3e1b16252d65"),
+            ActorId = new Guid("2c4f6a03-d0b1-4e0e-8e5a-d824d9ffa7c7"),
+            CharacterName = "Teddy Sanders"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("700ebda0-232e-4b1c-9be2-bf6a99893d6d"),
+            ActorId = new Guid("468fc8fc-00b2-4740-b025-f465bc99c283"),
+            CharacterName = "Wikus van de Merwe"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("700ebda0-232e-4b1c-9be2-bf6a99893d6d"),
+            ActorId = new Guid("480a5aa3-2618-4777-8d6c-764b0bac7a6b"),
+            CharacterName = "Christopher Johnson"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("700ebda0-232e-4b1c-9be2-bf6a99893d6d"),
+            ActorId = new Guid("7c412653-3c11-4b3a-8118-22a6c219f54c"),
+            CharacterName = "Koobus Venter"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("af12ea31-878c-43ce-95ac-bb3d54f277f4"),
+            ActorId = new Guid("d9963534-1f06-4a69-bf13-8e735e7c9e9f"),
+            CharacterName = "Theo Faron"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("af12ea31-878c-43ce-95ac-bb3d54f277f4"),
+            ActorId = new Guid("f0c4a679-e5fd-4329-811c-0735cff97711"),
+            CharacterName = "Julian"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("af12ea31-878c-43ce-95ac-bb3d54f277f4"),
+            ActorId = new Guid("3dacabea-76fa-48d7-8b12-4095bacbd787"),
+            CharacterName = "Jasper"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("88b25038-308e-4253-82c0-4a57151ad908"),
+            ActorId = new Guid("879fffcf-e8fe-4a4a-bab5-da42fc4d1256"),
+            CharacterName = "Caleb Smith"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("88b25038-308e-4253-82c0-4a57151ad908"),
+            ActorId = new Guid("2bb629f1-e03a-4c92-b265-6ba6f3674026"),
+            CharacterName = "Ava"
+        },
+        new MoviesActors()
+        {
+            MovieId = new Guid("88b25038-308e-4253-82c0-4a57151ad908"),
+            ActorId = new Guid("ea2f8e0d-eb55-4452-90a1-f810474cbe7f"),
+            CharacterName = "Nathan Bateman"
         }
     ];
 }
