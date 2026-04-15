@@ -33,9 +33,12 @@ public class ActorConfiguration :IEntityTypeConfiguration<Actor>
         
         builder
             .HasQueryFilter(a => !a.IsDeleted);
+        
+        builder
+            .HasData(SeedActors());
     }
 
-    public static List<Actor> SeedActors() =>
+    private static List<Actor> SeedActors() =>
     [
         new Actor()
         {

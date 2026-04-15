@@ -28,9 +28,15 @@ public class MoviesActorsConfiguration :IEntityTypeConfiguration<MoviesActors>
             .Property(ma => ma.CharacterName)
             .IsRequired()
             .HasMaxLength(EntityConstants.Actor.PlayedCharacterNameMaxLength);
+
+        builder
+            .HasQueryFilter(ma => !ma.Movie.IsDeleted && !ma.Actor.IsDeleted);
+
+        builder
+            .HasData(SeedMoviesActors());
     }
     
-    public static List<MoviesActors> SeedMoviesActors() =>
+    private static List<MoviesActors> SeedMoviesActors() =>
     [
         new MoviesActors()
         {

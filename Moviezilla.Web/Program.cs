@@ -11,9 +11,11 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-        var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+        var connectionString = builder.Configuration.GetConnectionString("PostgresConnection") ?? throw new InvalidOperationException("Connection string 'PostgresConnection' not found.");
         builder.Services.AddDbContext<MoviezillaDbContext>(options =>
-            options.UseNpgsql(connectionString));
+            options
+                .UseNpgsql(connectionString)
+                .UseSnakeCaseNamingConvention());
         builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
         builder.Services.AddDefaultIdentity<IdentityUser>(options =>

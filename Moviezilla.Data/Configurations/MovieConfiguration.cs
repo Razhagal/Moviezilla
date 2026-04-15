@@ -22,6 +22,11 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             .Property(m => m.Genre)
             .IsRequired()
             .HasMaxLength(GenreMaxLength);
+
+        builder
+            .Property(m => m.Rating)
+            .IsRequired()
+            .HasDefaultValue(RatingMinValue);
         
         builder
             .Property(m => m.Description)
@@ -49,9 +54,24 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
         
         builder
             .HasQueryFilter(m => !m.IsDeleted);
+
+        builder
+            .ToTable(t => t.HasCheckConstraint(
+                $"ck_{nameof(Movie).ToLower()}_{nameof(Movie.Rating).ToLower()}",
+                $"{nameof(Movie.Rating).ToLower()} >= {RatingMinValue} AND {nameof(Movie.Rating).ToLower()} <= {RatingMaxValue}"
+            ));
+        
+        builder
+            .ToTable(t => t.HasCheckConstraint(
+                $"ck_{nameof(Movie).ToLower()}_{nameof(Movie.Duration).ToLower()}",
+                $"{nameof(Movie.Duration).ToLower()} >= {DurationMin}"
+            ));
+
+        builder
+            .HasData(SeedMovies());
     }
 
-    public static List<Movie> SeedMovies() =>
+    private static List<Movie> SeedMovies() =>
     [
         new Movie()
         {
@@ -59,7 +79,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Mad Max: Fury Road",
             Genre = "Action",
             Rating = 8.1f,
-            Description = "An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and almost everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able to restore order. There's Max, a man of action and a man of few words, who seeks peace of mind following the loss of his wife and child in the aftermath of the chaos. And Furiosa, a woman of action and a woman who believes her path to survival may be achieved if she can make it across the desert back to her childhood homeland.\n",
+            Description = "An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and almost everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able to restore order. There's Max, a man of action and a man of few words, who seeks peace of mind following the loss of his wife and child in the aftermath of the chaos. And Furiosa, a woman of action and a woman who believes her path to survival may be achieved if she can make it across the desert back to her childhood homeland.",
             ShortDescription = "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshipper and a drifter named Max.",
             ReleaseDate = new DateOnly(2015, 5, 15),
             DirectorName = "George Miller",
@@ -176,7 +196,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "300",
             Genre = "Action",
             Rating = 7.6f,
-            Description = "In the Battle of Thermopylae of 480 BC an alliance of Greek city-states fought the invading Persian army in the mountain pass of Thermopylae. Vastly outnumbered, the Greeks held back the enemy in one of the most famous last stands of history. Persian King Xerxes led a Army of well over 100,000 (Persian king Xerxes before war has about 170,000 army) men to Greece and was confronted by 300 Spartans, 700 Thespians, and 400 Thebans. Xerxes waited for 10 days for King Leonidas to surrender or withdraw but left with no options he pushed forward. After 3 days of battle all the Greeks were killed. The Spartan defeat was not the one expected, as a local shepherd, named Ephialtes, defected to the Persians and informed Xerxes that the separate path through Thermopylae, which the Persians could use to outflank the Greeks, was not as heavily guarded as they thought.\n",
+            Description = "In the Battle of Thermopylae of 480 BC an alliance of Greek city-states fought the invading Persian army in the mountain pass of Thermopylae. Vastly outnumbered, the Greeks held back the enemy in one of the most famous last stands of history. Persian King Xerxes led a Army of well over 100,000 (Persian king Xerxes before war has about 170,000 army) men to Greece and was confronted by 300 Spartans, 700 Thespians, and 400 Thebans. Xerxes waited for 10 days for King Leonidas to surrender or withdraw but left with no options he pushed forward. After 3 days of battle all the Greeks were killed. The Spartan defeat was not the one expected, as a local shepherd, named Ephialtes, defected to the Persians and informed Xerxes that the separate path through Thermopylae, which the Persians could use to outflank the Greeks, was not as heavily guarded as they thought.",
             ShortDescription = "In the ancient battle of Thermopylae, King Leonidas and 300 Spartans fight against Xerxes and his massive Persian army.",
             ReleaseDate = new DateOnly(2007, 3, 9),
             DirectorName = "Zack Snyder",
@@ -189,7 +209,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "The Hangover",
             Genre = "Comedy",
             Rating = 7.7f,
-            Description = "Angelenos Doug Billings and Tracy Garner are about to get married. Two days before the wedding, the four men in the wedding party - Doug, Doug's two best buddies Phil Wenneck and Stu Price, and Tracy's brother Alan Garner - hop into Tracy's father's beloved Mercedes convertible for a 24-hour stag party to Las Vegas. Phil, a married high school teacher, has the same maturity level as his students when he's with his pals. Stu, a dentist, is worried about everything, especially what his controlling girlfriend Melissa thinks. Because she disapproves of traditional male bonding rituals, Stu has to lie to her about the stag, he telling her that they are going on a wine tasting tour in the Napa Valley. Regardless, he intends on eventually marrying her, against the advice and wishes of his friends. And Alan seems to be unaware of what are considered the social graces of the western world. The morning after their arrival in Las Vegas, they awaken in their hotel suite each with the worst hangover. None remembers what happened in the past twelve or so hours. The suite is in shambles. And certain things are in the suite that shouldn't be, and certain things that should be in the suite are missing. Probably the most important in the latter category is Doug. As Phil, Stu and Alan try to find Doug using only what little pieces of information they have at hand, they go on a journey of discovery of how certain things got into the suite and what happened to the missing items. However they are on a race for time as if they can't find Doug in the next few hours, they are going to have to explain to Tracy why they are not yet back in Los Angeles. And even worse, they may not find Doug at all before the wedding.\n",
+            Description = "Angelenos Doug Billings and Tracy Garner are about to get married. Two days before the wedding, the four men in the wedding party - Doug, Doug's two best buddies Phil Wenneck and Stu Price, and Tracy's brother Alan Garner - hop into Tracy's father's beloved Mercedes convertible for a 24-hour stag party to Las Vegas. Phil, a married high school teacher, has the same maturity level as his students when he's with his pals. Stu, a dentist, is worried about everything, especially what his controlling girlfriend Melissa thinks. Because she disapproves of traditional male bonding rituals, Stu has to lie to her about the stag, he telling her that they are going on a wine tasting tour in the Napa Valley. Regardless, he intends on eventually marrying her, against the advice and wishes of his friends. And Alan seems to be unaware of what are considered the social graces of the western world. The morning after their arrival in Las Vegas, they awaken in their hotel suite each with the worst hangover. None remembers what happened in the past twelve or so hours. The suite is in shambles. And certain things are in the suite that shouldn't be, and certain things that should be in the suite are missing. Probably the most important in the latter category is Doug. As Phil, Stu and Alan try to find Doug using only what little pieces of information they have at hand, they go on a journey of discovery of how certain things got into the suite and what happened to the missing items. However they are on a race for time as if they can't find Doug in the next few hours, they are going to have to explain to Tracy why they are not yet back in Los Angeles. And even worse, they may not find Doug at all before the wedding.",
             ShortDescription = "Three buddies wake up from a bachelor party in Las Vegas with no memory of the previous night and the bachelor missing. They must make their way around the city in order to find their friend in time for his wedding.",
             ReleaseDate = new DateOnly(2009, 6, 5),
             DirectorName = "Todd Phillips",
@@ -215,7 +235,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Dumb and Dumber",
             Genre = "Comedy",
             Rating = 7.3f,
-            Description = "Harry and Lloyd are two good friends who happen to be really stupid. The duo set out on a cross country trip from Providence to Aspen, Colorado to return a briefcase full of money to its rightful owner, a beautiful woman named Mary Swanson. After a trip of one mishap after another, the duo eventually make it to Aspen. But the two soon realize that Mary and her briefcase are the least of their problems.\n",
+            Description = "Harry and Lloyd are two good friends who happen to be really stupid. The duo set out on a cross country trip from Providence to Aspen, Colorado to return a briefcase full of money to its rightful owner, a beautiful woman named Mary Swanson. After a trip of one mishap after another, the duo eventually make it to Aspen. But the two soon realize that Mary and her briefcase are the least of their problems.",
             ShortDescription = "After a woman leaves a briefcase at the airport terminal, a dumb limo driver and his dumber friend set out on a hilarious cross-country road trip to Aspen to return it.",
             ReleaseDate = new DateOnly(1994, 12, 16),
             DirectorName = "Peter Farrelly",
@@ -228,7 +248,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Mean Girls",
             Genre = "Comedy",
             Rating = 7.1f,
-            Description = "Lindsay Lohan stars as Cady Heron, a 16 year old homeschooled girl who not only makes the mistake of falling for Aaron Samuels (Jonathan Bennett), the ex-boyfriend of queenbee Regina George (Rachel McAdams), but also unintentionally joins The Plastics, led by Regina herself. Join Cady as she learns that high school life can and will be really tough.\n",
+            Description = "Lindsay Lohan stars as Cady Heron, a 16 year old homeschooled girl who not only makes the mistake of falling for Aaron Samuels (Jonathan Bennett), the ex-boyfriend of queenbee Regina George (Rachel McAdams), but also unintentionally joins The Plastics, led by Regina herself. Join Cady as she learns that high school life can and will be really tough.",
             ShortDescription = "Cady Heron is a hit with The Plastics, the A-list girl clique at her new school, until she makes the mistake of falling for Aaron Samuels, the ex-boyfriend of alpha Plastic Regina George.",
             ReleaseDate = new DateOnly(2004, 4, 30),
             DirectorName = "Mark Waters",
@@ -293,7 +313,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Rush Hour",
             Genre = "Comedy",
             Rating = 7.1f,
-            Description = "Cultures clash and tempers flares as the two cops named Detective Inspector Lee a Hong Kong Detective and Detective James Carter LAPD, a big-mouthed work-alone Los Angeles cop who are from different worlds discovers one thing in common: they can't stand each other. With time running out, they must join forces to catch the criminals and save the eleven-year-old Chinese girl of the Chinese consul named Soo Yung.\n",
+            Description = "Cultures clash and tempers flares as the two cops named Detective Inspector Lee a Hong Kong Detective and Detective James Carter LAPD, a big-mouthed work-alone Los Angeles cop who are from different worlds discovers one thing in common: they can't stand each other. With time running out, they must join forces to catch the criminals and save the eleven-year-old Chinese girl of the Chinese consul named Soo Yung.",
             ShortDescription = "A loyal and dedicated Hong Kong Inspector teams up with a reckless and loudmouthed L.A.P.D. detective to rescue the Chinese Consul's kidnapped daughter, while trying to arrest a dangerous crime lord along the way.",
             ReleaseDate = new DateOnly(1998, 9, 18),
             DirectorName = "Brett Ratner",
@@ -345,7 +365,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "The Silence of the Lambs",
             Genre = "Thriller",
             Rating = 8.6f,
-            Description = "F.B.I. trainee Clarice Starling (Jodie Foster) works hard to advance her career, while trying to hide or put behind her West Virginia roots, of which if some knew, would automatically classify her as being backward or white trash. After graduation, she aspires to work in the agency's Behavioral Science Unit under the leadership of Jack Crawford (Scott Glenn). While she is still a trainee, Crawford asks her to question Dr. Hannibal Lecter (Sir Anthony Hopkins), a psychiatrist imprisoned, thus far, for eight years in maximum security isolation for being a serial killer who cannibalized his victims. Clarice is able to figure out the assignment is to pick Lecter's brains to help them solve another serial murder case, that of someone coined by the media as \"Buffalo Bill\" (Ted Levine), who has so far killed five victims, all located in the eastern U.S., all young women, who are slightly overweight (especially around the hips), all who were drowned in natural bodies of water, and all who were stripped of large swaths of skin. She also figures that Crawford chose her, as a woman, to be able to trigger some emotional response from Lecter. After speaking to Lecter for the first time, she realizes that everything with him will be a psychological game, with her often having to read between the very cryptic lines he provides. She has to decide how much she will play along, as his request in return for talking to him is to expose herself emotionally to him. The case takes a more dire turn when a sixth victim is discovered, this one from who they are able to retrieve a key piece of evidence, if Lecter is being forthright as to its meaning. A potential seventh victim is high profile Catherine Martin (Brooke Smith), the daughter of Senator Ruth Martin (Diane Baker), which places greater scrutiny on the case as they search for a hopefully still alive Catherine. Who may factor into what happens is Dr. Frederick Chilton (Anthony Heald), the warden at the prison, an opportunist who sees the higher profile with Catherine, meaning a higher profile for himself if he can insert himself successfully into the proceedings.\n",
+            Description = "F.B.I. trainee Clarice Starling (Jodie Foster) works hard to advance her career, while trying to hide or put behind her West Virginia roots, of which if some knew, would automatically classify her as being backward or white trash. After graduation, she aspires to work in the agency's Behavioral Science Unit under the leadership of Jack Crawford (Scott Glenn). While she is still a trainee, Crawford asks her to question Dr. Hannibal Lecter (Sir Anthony Hopkins), a psychiatrist imprisoned, thus far, for eight years in maximum security isolation for being a serial killer who cannibalized his victims. Clarice is able to figure out the assignment is to pick Lecter's brains to help them solve another serial murder case, that of someone coined by the media as \"Buffalo Bill\" (Ted Levine), who has so far killed five victims, all located in the eastern U.S., all young women, who are slightly overweight (especially around the hips), all who were drowned in natural bodies of water, and all who were stripped of large swaths of skin. She also figures that Crawford chose her, as a woman, to be able to trigger some emotional response from Lecter. After speaking to Lecter for the first time, she realizes that everything with him will be a psychological game, with her often having to read between the very cryptic lines he provides. She has to decide how much she will play along, as his request in return for talking to him is to expose herself emotionally to him. The case takes a more dire turn when a sixth victim is discovered, this one from who they are able to retrieve a key piece of evidence, if Lecter is being forthright as to its meaning. A potential seventh victim is high profile Catherine Martin (Brooke Smith), the daughter of Senator Ruth Martin (Diane Baker), which places greater scrutiny on the case as they search for a hopefully still alive Catherine. Who may factor into what happens is Dr. Frederick Chilton (Anthony Heald), the warden at the prison, an opportunist who sees the higher profile with Catherine, meaning a higher profile for himself if he can insert himself successfully into the proceedings.",
             ShortDescription = "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
             ReleaseDate = new DateOnly(1991, 2, 14),
             DirectorName = "Jonathan Demme",
@@ -371,7 +391,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Prisoners",
             Genre = "Thriller",
             Rating = 8.2f,
-            Description = "How far would you go to protect your family? Keller Dover is facing every parent's worst nightmare. His six-year-old daughter, Anna, is missing, together with her young friend, Joy, and as minutes turn to hours, panic sets in. The only lead is a dilapidated RV that had earlier been parked on their street. Heading the investigation, Detective Loki arrests its driver, Alex Jones, but a lack of evidence forces his release. As the police pursue multiple leads and pressure mounts, knowing his child's life is at stake the frantic Dover decides he has no choice but to take matters into his own hands. But just how far will this desperate father go to protect his family?\n",
+            Description = "How far would you go to protect your family? Keller Dover is facing every parent's worst nightmare. His six-year-old daughter, Anna, is missing, together with her young friend, Joy, and as minutes turn to hours, panic sets in. The only lead is a dilapidated RV that had earlier been parked on their street. Heading the investigation, Detective Loki arrests its driver, Alex Jones, but a lack of evidence forces his release. As the police pursue multiple leads and pressure mounts, knowing his child's life is at stake the frantic Dover decides he has no choice but to take matters into his own hands. But just how far will this desperate father go to protect his family?",
             ShortDescription = "A desperate father takes the law into his own hands after police fail to find two kidnapped girls.",
             ReleaseDate = new DateOnly(2013, 9, 20),
             DirectorName = "Denis Villeneuve",
@@ -397,7 +417,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Nightcrawler",
             Genre = "Thriller",
             Rating = 7.8f,
-            Description = "NIGHTCRAWLER is a thriller set in the nocturnal underbelly of contemporary Los Angeles. Jake Gyllenhaal stars as Lou Bloom, a driven young man desperate for work who discovers the high-speed world of L.A. crime journalism. Finding a group of freelance camera crews who film crashes, fires, murder and other mayhem, Lou muscles into the cut-throat, dangerous realm of nightcrawling - where each police siren wail equals a possible windfall and victims are converted into dollars and cents. Aided by Rene Russo as Nina, a veteran of the blood-sport that is local TV news, Lou blurs the line between observer and participant to become the star of his own story.\n",
+            Description = "NIGHTCRAWLER is a thriller set in the nocturnal underbelly of contemporary Los Angeles. Jake Gyllenhaal stars as Lou Bloom, a driven young man desperate for work who discovers the high-speed world of L.A. crime journalism. Finding a group of freelance camera crews who film crashes, fires, murder and other mayhem, Lou muscles into the cut-throat, dangerous realm of nightcrawling - where each police siren wail equals a possible windfall and victims are converted into dollars and cents. Aided by Rene Russo as Nina, a veteran of the blood-sport that is local TV news, Lou blurs the line between observer and participant to become the star of his own story.",
             ShortDescription = "A petty thief desperate for work muscles into the world of crime journalism and becomes the star of his own story as he blurs the line between observer and participant.",
             ReleaseDate = new DateOnly(2014, 10, 31),
             DirectorName = "Dan Gilroy",
@@ -462,7 +482,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Forrest Gump",
             Genre = "Drama",
             Rating = 8.8f,
-            Description = "Forrest Gump is a simple man with a low I.Q. but good intentions. He is running through childhood with his best and only friend Jenny. His 'mama' teaches him the ways of life and leaves him to choose his destiny. Forrest joins the army for service in Vietnam, finding new friends called Dan and Bubba, he wins medals, creates a famous shrimp fishing fleet, inspires people to jog, starts a ping-pong craze, creates the smiley, writes bumper stickers and songs, donates to people and meets the president several times. However, this is all irrelevant to Forrest who can only think of his childhood sweetheart Jenny Curran, who has messed up her life. Although in the end all he wants to prove is that anyone can love anyone.\n",
+            Description = "Forrest Gump is a simple man with a low I.Q. but good intentions. He is running through childhood with his best and only friend Jenny. His 'mama' teaches him the ways of life and leaves him to choose his destiny. Forrest joins the army for service in Vietnam, finding new friends called Dan and Bubba, he wins medals, creates a famous shrimp fishing fleet, inspires people to jog, starts a ping-pong craze, creates the smiley, writes bumper stickers and songs, donates to people and meets the president several times. However, this is all irrelevant to Forrest who can only think of his childhood sweetheart Jenny Curran, who has messed up her life. Although in the end all he wants to prove is that anyone can love anyone.",
             ShortDescription = "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.",
             ReleaseDate = new DateOnly(1994, 7, 6),
             DirectorName = "Robert Zemeckis",
@@ -475,7 +495,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Fight Club",
             Genre = "Drama",
             Rating = 8.8f,
-            Description = "A nameless first-person narrator attends support groups in an attempt to subdue his emotional state and relieve his insomniac state. When he meets Marla, another fake attendee of support groups, his life seems to become a little more bearable. However, when he associates himself with Tyler he is dragged into an underground fight club and soap-making scheme. Together the two men spiral out of control and engage in competitive rivalry for love and power.\n",
+            Description = "A nameless first-person narrator attends support groups in an attempt to subdue his emotional state and relieve his insomniac state. When he meets Marla, another fake attendee of support groups, his life seems to become a little more bearable. However, when he associates himself with Tyler he is dragged into an underground fight club and soap-making scheme. Together the two men spiral out of control and engage in competitive rivalry for love and power.",
             ShortDescription = "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
             ReleaseDate = new DateOnly(1999, 10, 15),
             DirectorName = "David Fincher",
@@ -488,7 +508,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "The Godfather",
             Genre = "Drama",
             Rating = 9.2f,
-            Description = "The Godfather \"Don\" Vito Corleone is the head of the Corleone mafia family in New York. He is at the event of his daughter's wedding. Michael, Vito's youngest son and a decorated WWII Marine is also present at the wedding. Michael seems to be uninterested in being a part of the family business. Vito is a powerful man, and is kind to all those who give him respect but is ruthless against those who do not. But when a powerful and treacherous rival wants to sell drugs and needs the Don's influence for the same, Vito refuses to do it. What follows is a clash between Vito's fading old values and the new ways which may cause Michael to do the thing he was most reluctant in doing and wage a mob war against all the other mafia families which could tear the Corleone family apart.\n",
+            Description = "The Godfather \"Don\" Vito Corleone is the head of the Corleone mafia family in New York. He is at the event of his daughter's wedding. Michael, Vito's youngest son and a decorated WWII Marine is also present at the wedding. Michael seems to be uninterested in being a part of the family business. Vito is a powerful man, and is kind to all those who give him respect but is ruthless against those who do not. But when a powerful and treacherous rival wants to sell drugs and needs the Don's influence for the same, Vito refuses to do it. What follows is a clash between Vito's fading old values and the new ways which may cause Michael to do the thing he was most reluctant in doing and wage a mob war against all the other mafia families which could tear the Corleone family apart.",
             ShortDescription = "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
             ReleaseDate = new DateOnly(1972, 3, 24),
             DirectorName = "Francis Ford Coppola",
@@ -501,7 +521,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "A Beautiful Mind",
             Genre = "Drama",
             Rating = 8.2f,
-            Description = "Mathematician John Nash rises to prominence at Princeton with his groundbreaking theories in game theory. While achieving academic success, he begins experiencing paranoid delusions and hallucinations, straining his relationships with his wife Alicia and colleagues. Nash struggles with schizophrenia, gradually learning to distinguish reality from illusion while continuing his work. The film explores genius, mental illness, love, and perseverance, showing the challenges of balancing personal struggles with professional achievement.\n",
+            Description = "Mathematician John Nash rises to prominence at Princeton with his groundbreaking theories in game theory. While achieving academic success, he begins experiencing paranoid delusions and hallucinations, straining his relationships with his wife Alicia and colleagues. Nash struggles with schizophrenia, gradually learning to distinguish reality from illusion while continuing his work. The film explores genius, mental illness, love, and perseverance, showing the challenges of balancing personal struggles with professional achievement.",
             ShortDescription = "A mathematical genius, John Nash made an astonishing discovery early in his career and stood on the brink of international acclaim. But Nash soon found himself on a harrowing journey of self-discovery.",
             ReleaseDate = new DateOnly(2001, 12, 21),
             DirectorName = "Ron Howard",
@@ -540,7 +560,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Whiplash",
             Genre = "Drama",
             Rating = 8.5f,
-            Description = "Nineteen-year-old Andrew Nieman wants to be the greatest jazz drummer in the world, in a league with Buddy Rich. This goal is despite not coming from a pedigree of greatest, musical or otherwise, with Jim, his high-school-teacher father, being a failed writer. Andrew is starting his first year at Shaffer Conservatory of Music, the best music school in the United States. At Shaffer, being the best means being accepted to study under Terence Fletcher and being asked to play in his studio band, which represents the school at jazz competitions. Based on their less than positive first meeting, Andrew is surprised that Fletcher asks him to join the band, albeit in the alternate drummer position which he is more than happy to do initially. Andrew quickly learns that Fletcher operates on fear and intimidation, never settling for what he considers less than the best each and every time. Being the best in Fletcher's mind does not only entail playing well, but knowing that you're playing well and if not what you're doing wrong. His modus operandi creates an atmosphere of fear and of every man or woman for him/herself within the band. Regardless, Andrew works hard to be the best. He has to figure out his life priorities and what he is willing to sacrifice to be the best. The other question becomes how much emotional abuse he will endure by Fletcher to reach that greatness, which he may believe he can only achieve with the avenues opened up by Fletcher.\n",
+            Description = "Nineteen-year-old Andrew Nieman wants to be the greatest jazz drummer in the world, in a league with Buddy Rich. This goal is despite not coming from a pedigree of greatest, musical or otherwise, with Jim, his high-school-teacher father, being a failed writer. Andrew is starting his first year at Shaffer Conservatory of Music, the best music school in the United States. At Shaffer, being the best means being accepted to study under Terence Fletcher and being asked to play in his studio band, which represents the school at jazz competitions. Based on their less than positive first meeting, Andrew is surprised that Fletcher asks him to join the band, albeit in the alternate drummer position which he is more than happy to do initially. Andrew quickly learns that Fletcher operates on fear and intimidation, never settling for what he considers less than the best each and every time. Being the best in Fletcher's mind does not only entail playing well, but knowing that you're playing well and if not what you're doing wrong. His modus operandi creates an atmosphere of fear and of every man or woman for him/herself within the band. Regardless, Andrew works hard to be the best. He has to figure out his life priorities and what he is willing to sacrifice to be the best. The other question becomes how much emotional abuse he will endure by Fletcher to reach that greatness, which he may believe he can only achieve with the avenues opened up by Fletcher.",
             ShortDescription = "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",
             ReleaseDate = new DateOnly(2014, 10, 10),
             DirectorName = "Damien Chazelle",
@@ -566,7 +586,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Joker",
             Genre = "Drama",
             Rating = 8.3f,
-            Description = "A socially inept clown for hire - Arthur Fleck aspires to be a stand up comedian among his small job working dressed as a clown holding a sign for advertising. He takes care of his mother, Penny Fleck, and as he learns more about his mental illness, he learns more about his past. Dealing with all the negativity and bullying from society, he heads downwards on a spiral, in turn showing how his alter ego, \"Joker,\" came to be.\n",
+            Description = "A socially inept clown for hire - Arthur Fleck aspires to be a stand up comedian among his small job working dressed as a clown holding a sign for advertising. He takes care of his mother, Penny Fleck, and as he learns more about his mental illness, he learns more about his past. Dealing with all the negativity and bullying from society, he heads downwards on a spiral, in turn showing how his alter ego, \"Joker,\" came to be.",
             ShortDescription = "Arthur Fleck, a party clown and a failed stand-up comedian, leads an impoverished life with his ailing mother. However, when society shuns him and brands him as a freak, he decides to embrace the life of chaos in Gotham City.",
             ReleaseDate = new DateOnly(2019, 10, 4),
             DirectorName = "Todd Phillips",
@@ -579,7 +599,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "The Exorcist",
             Genre = "Horror",
             Rating = 8.1f,
-            Description = "A visiting actress in Washington, D.C., notices dramatic and dangerous changes in the behavior and physical makeup of her 12 year-old daughter. Meanwhile, a young priest at nearby Georgetown University begins to doubt his faith while dealing with his mother's terminal sickness. A frail, elderly priest recognizes the necessity for a show-down with an old demonic enemy.\n",
+            Description = "A visiting actress in Washington, D.C., notices dramatic and dangerous changes in the behavior and physical makeup of her 12 year-old daughter. Meanwhile, a young priest at nearby Georgetown University begins to doubt his faith while dealing with his mother's terminal sickness. A frail, elderly priest recognizes the necessity for a show-down with an old demonic enemy.",
             ShortDescription = "When a mysterious entity possesses a young girl, her mother seeks the help of two Catholic priests to save her life.",
             ReleaseDate = new DateOnly(1973, 12, 26),
             DirectorName = "William Friedkin",
@@ -592,7 +612,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Hereditary",
             Genre = "Horror",
             Rating = 7.3f,
-            Description = "When Ellen, the matriarch of the Graham family, passes away, her daughter's family begins to unravel cryptic and increasingly terrifying secrets about their ancestry. The more they discover, the more they find themselves trying to outrun the sinister fate they seem to have inherited. Making his feature debut, writer-director Ari Aster unleashes a nightmare vision of a domestic breakdown that exhibits the craft and precision of a nascent auteur, transforming a familial tragedy into something ominous and deeply disquieting, and pushing the horror movie into chilling new terrain with its shattering portrait of heritage gone to hell.\n",
+            Description = "When Ellen, the matriarch of the Graham family, passes away, her daughter's family begins to unravel cryptic and increasingly terrifying secrets about their ancestry. The more they discover, the more they find themselves trying to outrun the sinister fate they seem to have inherited. Making his feature debut, writer-director Ari Aster unleashes a nightmare vision of a domestic breakdown that exhibits the craft and precision of a nascent auteur, transforming a familial tragedy into something ominous and deeply disquieting, and pushing the horror movie into chilling new terrain with its shattering portrait of heritage gone to hell.",
             ShortDescription = "A grieving family is haunted by tragic and disturbing occurrences.",
             ReleaseDate = new DateOnly(2018, 6, 8),
             DirectorName = "Ari Aster",
@@ -670,7 +690,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Halloween",
             Genre = "Horror",
             Rating = 7.7f,
-            Description = "The year is 1963, the night: Halloween. Police are called to 43 Lampkin Ln. only to discover that 15-year-old Judith Myers has been stabbed to death by her 6-year-old brother, Michael. After being institutionalized for 15 years, Myers breaks out on the night before Halloween. No one knows, nor wants to find out, what will happen on October 31st 1978, besides Myers' psychiatrist, Dr. Loomis. He knows Michael is coming back to Haddonfield, but by the time the town realizes it, it'll be too late for many people.\n",
+            Description = "The year is 1963, the night: Halloween. Police are called to 43 Lampkin Ln. only to discover that 15-year-old Judith Myers has been stabbed to death by her 6-year-old brother, Michael. After being institutionalized for 15 years, Myers breaks out on the night before Halloween. No one knows, nor wants to find out, what will happen on October 31st 1978, besides Myers' psychiatrist, Dr. Loomis. He knows Michael is coming back to Haddonfield, but by the time the town realizes it, it'll be too late for many people.",
             ShortDescription = "Fifteen years after murdering his sister on Halloween night 1963, Michael Myers escapes from a mental hospital and returns to the small town of Haddonfield, Illinois, to kill again.",
             ReleaseDate = new DateOnly(1978, 10, 25),
             DirectorName = "John Carpenter",
@@ -683,7 +703,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "The Shining",
             Genre = "Horror",
             Rating = 8.4f,
-            Description = "After landing a job as an off-season caretaker, Jack Torrance, an aspiring author and recovering alcoholic, drags his wife Wendy and gifted son Danny to snow-covered Colorado's secluded Overlook Hotel. However, writer's block prevents Jack from pursuing a new writing career. Everything has its time, however. First, the manager must give Jack a grand tour. Then, Mr Hallorann, the facility's aging chef, chats with Danny about rare psychic gifts. The mysterious employee also warns the boy about the cavernous hotel's abandoned rooms. Room 237, especially, is off-limits. That's all very well, but Jack is gradually losing his mind. After all, strange occurrences and blood-chilling visions have trapped the family in a silent gargantuan prison hammered by endless snowstorms. And now, incessant voices inside Jack's head demand sacrifice. However, is Jack capable of murder?\n",
+            Description = "After landing a job as an off-season caretaker, Jack Torrance, an aspiring author and recovering alcoholic, drags his wife Wendy and gifted son Danny to snow-covered Colorado's secluded Overlook Hotel. However, writer's block prevents Jack from pursuing a new writing career. Everything has its time, however. First, the manager must give Jack a grand tour. Then, Mr Hallorann, the facility's aging chef, chats with Danny about rare psychic gifts. The mysterious employee also warns the boy about the cavernous hotel's abandoned rooms. Room 237, especially, is off-limits. That's all very well, but Jack is gradually losing his mind. After all, strange occurrences and blood-chilling visions have trapped the family in a silent gargantuan prison hammered by endless snowstorms. And now, incessant voices inside Jack's head demand sacrifice. However, is Jack capable of murder?",
             ShortDescription = "A family heads to an isolated hotel for the winter, where a sinister presence influences the father into violence. At the same time, his psychic son sees horrifying forebodings from both the past and the future.",
             ReleaseDate = new DateOnly(1980, 5, 23),
             DirectorName = "Stanley Kubrick",
@@ -696,7 +716,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Insidious",
             Genre = "Horror",
             Rating = 6.8f,
-            Description = "Brimming with excitement and hope for a fresh start, Josh and Renai Lambert move into their new home with their three children. But the couple's bliss is short-lived. As a mysterious accident leaves their boy, Dalton, in a science-defying coma for months, blood-chilling occurrences in the house can only mean one thing: something evil has set its sights on robbing the Lamberts of what they hold dear. With sickness replacing happiness, experienced paranormal investigator Elise Rainier agrees to infiltrate The Further, the dark realm of lost spirits, to search for the Lamberts' missing son. However, after the life-altering experience in Insidious: The Last Key (2018), Elise is more exposed to all-consuming darkness. As answers demand courage and faith, could Dalton's shackled soul be trapped behind the ominous red-lacquered door?\n",
+            Description = "Brimming with excitement and hope for a fresh start, Josh and Renai Lambert move into their new home with their three children. But the couple's bliss is short-lived. As a mysterious accident leaves their boy, Dalton, in a science-defying coma for months, blood-chilling occurrences in the house can only mean one thing: something evil has set its sights on robbing the Lamberts of what they hold dear. With sickness replacing happiness, experienced paranormal investigator Elise Rainier agrees to infiltrate The Further, the dark realm of lost spirits, to search for the Lamberts' missing son. However, after the life-altering experience in Insidious: The Last Key (2018), Elise is more exposed to all-consuming darkness. As answers demand courage and faith, could Dalton's shackled soul be trapped behind the ominous red-lacquered door?",
             ShortDescription = "A family looks to prevent evil spirits from trapping their comatose child in a realm called The Further.",
             ReleaseDate = new DateOnly(2010, 9, 14),
             DirectorName = "James Wan",
@@ -735,7 +755,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Black Panther",
             Genre = "Superhero",
             Rating = 7.3f,
-            Description = "After the events of Captain America: Civil War, Prince T'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new king. However, T'Challa soon finds that he is challenged for the throne from factions within his own country. When two foes conspire to destroy Wakanda, the hero known as Black Panther must team up with C.I.A. agent Everett K. Ross and members of the Dora Milaje, Wakandan special forces, to prevent Wakanda from being dragged into a world war.\n",
+            Description = "After the events of Captain America: Civil War, Prince T'Challa returns home to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new king. However, T'Challa soon finds that he is challenged for the throne from factions within his own country. When two foes conspire to destroy Wakanda, the hero known as Black Panther must team up with C.I.A. agent Everett K. Ross and members of the Dora Milaje, Wakandan special forces, to prevent Wakanda from being dragged into a world war.",
             ShortDescription = "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
             ReleaseDate = new DateOnly(2018, 2, 16),
             DirectorName = "Ryan Coogler",
@@ -761,7 +781,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Iron Man",
             Genre = "Superhero",
             Rating = 7.9f,
-            Description = "Tony Stark. Genius, billionaire, playboy, philanthropist. Son of legendary inventor and weapons contractor Howard Stark. When Tony Stark is assigned to give a weapons presentation to an Iraqi unit led by Lt. Col. James Rhodes, he's given a ride on enemy lines. That ride ends badly when Stark's Humvee that he's riding in is attacked by enemy combatants. He survives - barely - with a chest full of shrapnel and a car battery attached to his heart. In order to survive he comes up with a way to miniaturize the battery and figures out that the battery can power something else. Thus Iron Man is born. He uses the primitive device to escape from the cave in Iraq. Once back home, he then begins work on perfecting the Iron Man suit. But the man who was put in charge of Stark Industries has plans of his own to take over Tony's technology for other matters.\n",
+            Description = "Tony Stark. Genius, billionaire, playboy, philanthropist. Son of legendary inventor and weapons contractor Howard Stark. When Tony Stark is assigned to give a weapons presentation to an Iraqi unit led by Lt. Col. James Rhodes, he's given a ride on enemy lines. That ride ends badly when Stark's Humvee that he's riding in is attacked by enemy combatants. He survives - barely - with a chest full of shrapnel and a car battery attached to his heart. In order to survive he comes up with a way to miniaturize the battery and figures out that the battery can power something else. Thus Iron Man is born. He uses the primitive device to escape from the cave in Iraq. Once back home, he then begins work on perfecting the Iron Man suit. But the man who was put in charge of Stark Industries has plans of his own to take over Tony's technology for other matters.",
             ShortDescription = "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
             ReleaseDate = new DateOnly(2008, 5, 2),
             DirectorName = "Jon Favreau",
@@ -787,7 +807,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Deadpool",
             Genre = "Superhero",
             Rating = 8.0f,
-            Description = "This is the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life.\n",
+            Description = "This is the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life.",
             ShortDescription = "A wisecracking mercenary gets experimented on and becomes immortal yet hideously scarred, and sets out to track down the man who ruined his looks.",
             ReleaseDate = new DateOnly(2016, 2, 12),
             DirectorName = "Tim Miller",
@@ -800,7 +820,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Doctor Strange",
             Genre = "Superhero",
             Rating = 7.5f,
-            Description = "Marvel's \"Doctor Strange\" follows the story of the talented neurosurgeon Doctor Stephen Strange who, after a tragic car accident, must put ego aside and learn the secrets of a hidden world of mysticism and alternate dimensions. Based in New York City's Greenwich Village, Doctor Strange must act as an intermediary between the real world and what lies beyond, utilising a vast array of metaphysical abilities and artifacts to protect the Marvel Cinematic Universe.\n",
+            Description = "Marvel's \"Doctor Strange\" follows the story of the talented neurosurgeon Doctor Stephen Strange who, after a tragic car accident, must put ego aside and learn the secrets of a hidden world of mysticism and alternate dimensions. Based in New York City's Greenwich Village, Doctor Strange must act as an intermediary between the real world and what lies beyond, utilising a vast array of metaphysical abilities and artifacts to protect the Marvel Cinematic Universe.",
             ShortDescription = "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.",
             ReleaseDate = new DateOnly(2016, 11, 4),
             DirectorName = "Scott Derrickson",
@@ -826,7 +846,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Guardians of the Galaxy",
             Genre = "Superhero",
             Rating = 8.0f,
-            Description = "After stealing a mysterious orb in the far reaches of outer space, Peter Quill from Earth is now the main target of a manhunt led by the villain known as Ronan the Accuser. To help fight Ronan and his team and save the galaxy from his power, Quill creates a team of space heroes known as the \"Guardians of the Galaxy\" to save the galaxy.\n",
+            Description = "After stealing a mysterious orb in the far reaches of outer space, Peter Quill from Earth is now the main target of a manhunt led by the villain known as Ronan the Accuser. To help fight Ronan and his team and save the galaxy from his power, Quill creates a team of space heroes known as the \"Guardians of the Galaxy\" to save the galaxy.",
             ShortDescription = "A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.",
             ReleaseDate = new DateOnly(2014, 8, 1),
             DirectorName = "James Gunn",
@@ -839,7 +859,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "The Lord of the Rings: The Fellowship of the Ring",
             Genre = "Fantasy",
             Rating = 8.9f,
-            Description = "An ancient Ring thought lost for centuries has been found, and through a strange twist of fate has been given to a small Hobbit named Frodo. When Gandalf discovers the Ring is in fact the One Ring of the Dark Lord Sauron, Frodo must make an epic quest to Mount Doom in order to destroy it. However, he does not go alone. He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir, and his three Hobbit friends Merry, Pippin, and Samwise. Through mountains, snow, darkness, forests, rivers and plains, facing evil and danger at every corner the Fellowship of the Ring must go. Their quest to destroy the One Ring is the only hope for the end of the Dark Lords reign.\n",
+            Description = "An ancient Ring thought lost for centuries has been found, and through a strange twist of fate has been given to a small Hobbit named Frodo. When Gandalf discovers the Ring is in fact the One Ring of the Dark Lord Sauron, Frodo must make an epic quest to Mount Doom in order to destroy it. However, he does not go alone. He is joined by Gandalf, Legolas the elf, Gimli the Dwarf, Aragorn, Boromir, and his three Hobbit friends Merry, Pippin, and Samwise. Through mountains, snow, darkness, forests, rivers and plains, facing evil and danger at every corner the Fellowship of the Ring must go. Their quest to destroy the One Ring is the only hope for the end of the Dark Lords reign.",
             ShortDescription = "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
             ReleaseDate = new DateOnly(2001, 12, 19),
             DirectorName = "Peter Jackson",
@@ -878,7 +898,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Harry Potter and the Sorcerer's Stone",    
             Genre = "Fantasy",
             Rating = 7.7f,
-            Description = "This is the tale of Harry Potter (Daniel Radcliffe), an ordinary eleven-year-old boy serving as a sort of slave for his aunt and uncle who learns that he is actually a wizard and has been invited to attend the Hogwarts School for Witchcraft and Wizardry. Harry is snatched away from his mundane existence by Rubeus Hagrid (Robbie Coltrane), the groundskeeper for Hogwarts, and quickly thrown into a world completely foreign to both him and the viewer. Famous for an incident that happened at his birth, Harry makes friends easily at his new school. He soon finds, however, that the wizarding world is far more dangerous for him than he would have imagined, and he quickly learns that not all wizards are ones to be trusted.\n",
+            Description = "This is the tale of Harry Potter (Daniel Radcliffe), an ordinary eleven-year-old boy serving as a sort of slave for his aunt and uncle who learns that he is actually a wizard and has been invited to attend the Hogwarts School for Witchcraft and Wizardry. Harry is snatched away from his mundane existence by Rubeus Hagrid (Robbie Coltrane), the groundskeeper for Hogwarts, and quickly thrown into a world completely foreign to both him and the viewer. Famous for an incident that happened at his birth, Harry makes friends easily at his new school. He soon finds, however, that the wizarding world is far more dangerous for him than he would have imagined, and he quickly learns that not all wizards are ones to be trusted.",
             ShortDescription = "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",
             ReleaseDate = new DateOnly(2001, 11, 16),
             DirectorName = "Chris Columbus",
@@ -891,7 +911,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Harry Potter and the Prisoner of Azkaban",
             Genre = "Fantasy",
             Rating = 7.9f,
-            Description = "Harry Potter (Daniel Radcliffe) is having a tough time with his relatives (yet again). He runs away after using magic to inflate Uncle Vernon's (Richard Griffiths') sister Marge (Pam Ferris), who was being offensive towards Harry's parents. Initially scared for using magic outside the school, he is pleasantly surprised that he won't be penalized after all. However, he soon learns that a dangerous criminal and Voldemort's trusted aide Sirius Black (Gary Oldman) has escaped from Azkaban Prison and wants to kill Harry to avenge the Dark Lord. To worsen the conditions for Harry, vile creatures called Dementors are appointed to guard the school gates and inexplicably happen to have the most horrible effect on him. Little does Harry know that by the end of this year, many holes in his past (whatever he knows of it) will be filled up and he will have a clearer vision of what the future has in store.\n",
+            Description = "Harry Potter (Daniel Radcliffe) is having a tough time with his relatives (yet again). He runs away after using magic to inflate Uncle Vernon's (Richard Griffiths') sister Marge (Pam Ferris), who was being offensive towards Harry's parents. Initially scared for using magic outside the school, he is pleasantly surprised that he won't be penalized after all. However, he soon learns that a dangerous criminal and Voldemort's trusted aide Sirius Black (Gary Oldman) has escaped from Azkaban Prison and wants to kill Harry to avenge the Dark Lord. To worsen the conditions for Harry, vile creatures called Dementors are appointed to guard the school gates and inexplicably happen to have the most horrible effect on him. Little does Harry know that by the end of this year, many holes in his past (whatever he knows of it) will be filled up and he will have a clearer vision of what the future has in store.",
             ShortDescription = "Harry Potter, Ron and Hermione return to Hogwarts School of Witchcraft and Wizardry for their third year of study, where they delve into the mystery surrounding an escaped prisoner who poses a dangerous threat to the young wizard.",
             ReleaseDate = new DateOnly(2004, 6, 4),
             DirectorName = "Alfonso Cuarón",
@@ -956,7 +976,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Stardust",
             Genre = "Fantasy",
             Rating = 7.6f,
-            Description = "The passage from this world to the fantasy kingdom of Stormhold is through a breach in a wall beside an English village. In the 1800s, a boy becomes a man when he ventures through the breach in pursuit of a fallen star, to prove his love for the village beauty. The star is no lump of rock, it's a maiden, Yvaine. Tristan, the youth, is not the only one looking for her: three witches, led by Lamia, want her heart to make them young; and, the sons of the dead king of Stormhold want her because she holds a ruby that will give one of them title to the throne. Assisting Tristan are his mother, the victim of a spell, and a cross-dressing pirate of the skies. Will Tristan win his true love?\n",
+            Description = "The passage from this world to the fantasy kingdom of Stormhold is through a breach in a wall beside an English village. In the 1800s, a boy becomes a man when he ventures through the breach in pursuit of a fallen star, to prove his love for the village beauty. The star is no lump of rock, it's a maiden, Yvaine. Tristan, the youth, is not the only one looking for her: three witches, led by Lamia, want her heart to make them young; and, the sons of the dead king of Stormhold want her because she holds a ruby that will give one of them title to the throne. Assisting Tristan are his mother, the victim of a spell, and a cross-dressing pirate of the skies. Will Tristan win his true love?",
             ShortDescription = "In a countryside town bordering on a magical land, a young man makes a promise to his beloved that he'll retrieve a fallen star by venturing into the magical realm.",
             ReleaseDate = new DateOnly(2007, 8, 10),
             DirectorName = "Matthew Vaughn",
@@ -995,7 +1015,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Blade Runner 2049",
             Genre = "Sci-fi",
             Rating = 8.0f,
-            Description = "Thirty years after the events of Blade Runner (1982), a new Blade Runner, L.A.P.D. Officer \"K\" (Ryan Gosling), unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard (Harrison Ford), a former L.A.P.D. Blade Runner, who has been missing for thirty years.\n",
+            Description = "Thirty years after the events of Blade Runner (1982), a new Blade Runner, L.A.P.D. Officer \"K\" (Ryan Gosling), unearths a long-buried secret that has the potential to plunge what's left of society into chaos. K's discovery leads him on a quest to find Rick Deckard (Harrison Ford), a former L.A.P.D. Blade Runner, who has been missing for thirty years.",
             ShortDescription = "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
             ReleaseDate = new DateOnly(2017, 10, 6),
             DirectorName = "Denis Villeneuve",
@@ -1021,7 +1041,7 @@ public class MovieConfiguration : IEntityTypeConfiguration<Movie>
             Title = "Aliens",
             Genre = "Sci-fi",
             Rating = 8.4f,
-            Description = "57 years after Ellen Ripley had a close encounter with the reptilian alien creature from the first movie, she is called back, this time, to help a group of highly trained colonial marines fight off against the sinister extraterrestrials. But this time, the aliens have taken over a space colony on the moon LV-426. When the colonial marines are called upon to search the deserted space colony, they later find out that they are up against more than what they bargained for. Using specially modified machine guns and enough firepower, it's either fight or die as the space marines battle against the aliens.\n",
+            Description = "57 years after Ellen Ripley had a close encounter with the reptilian alien creature from the first movie, she is called back, this time, to help a group of highly trained colonial marines fight off against the sinister extraterrestrials. But this time, the aliens have taken over a space colony on the moon LV-426. When the colonial marines are called upon to search the deserted space colony, they later find out that they are up against more than what they bargained for. Using specially modified machine guns and enough firepower, it's either fight or die as the space marines battle against the aliens.",
             ShortDescription = "Decades after surviving the Nostromo incident, Ellen Ripley is sent out to re-establish contact with a terraforming colony but finds herself battling the Alien Queen and her offspring.",
             ReleaseDate = new DateOnly(1986, 7, 18),
             DirectorName = "James Cameron",
