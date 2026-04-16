@@ -4,35 +4,134 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
-    <title>@ViewData["Title"] - Moviezilla.Web</title>
+    @* <title>@ViewData["Title"] - Moviezilla</title> *@
+    <title>Moviezilla</title>
     
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/movies-styles.css" asp-append-version="true">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+  @*   <style> *@
+  @*    *@
+  @*   .cinema-navbar { *@
+  @*     background: linear-gradient(180deg, #07090d 0%, #0b0d13 100%); *@
+  @*     min-height: 84px; *@
+  @*     padding: 0 28px; *@
+  @*     border-bottom: 1px solid rgba(255, 255, 255, 0.04); *@
+  @*   } *@
+  @* *@
+  @*   .brand { *@
+  @*     font-size: 2rem; *@
+  @*     font-weight: 800; *@
+  @*     color: #f59b2f; *@
+  @*     letter-spacing: 0.5px; *@
+  @*     text-decoration: none; *@
+  @*   } *@
+  @* *@
+  @*   .center-nav .nav-link { *@
+  @*     color: #8f96a3; *@
+  @*     text-transform: uppercase; *@
+  @*     font-size: 0.82rem; *@
+  @*     letter-spacing: 1.8px; *@
+  @*     padding: 0.5rem 1rem; *@
+  @*     position: relative; *@
+  @*     transition: color 0.2s ease; *@
+  @*   } *@
+  @* *@
+  @*   .center-nav .nav-link:hover, *@
+  @*   .center-nav .nav-link.active { *@
+  @*     color: #f59b2f; *@
+  @*   } *@
+  @* *@
+  @*   .center-nav .nav-link.active::after { *@
+  @*     content: ""; *@
+  @*     position: absolute; *@
+  @*     left: 50%; *@
+  @*     bottom: -10px; *@
+  @*     transform: translateX(-50%); *@
+  @*     width: 42px; *@
+  @*     height: 2px; *@
+  @*     background: #f59b2f; *@
+  @*     border-radius: 2px; *@
+  @*   } *@
+  @* *@
+  @*   .search-wrap { *@
+  @*     width: 210px; *@
+  @*     max-width: 100%; *@
+  @*   } *@
+  @* *@
+  @*   .search-wrap .input-group-text, *@
+  @*   .search-wrap .form-control { *@
+  @*     background: rgba(255, 255, 255, 0.05); *@
+  @*     border: none; *@
+  @*     color: #c9ced6; *@
+  @*     height: 40px; *@
+  @*   } *@
+  @* *@
+  @*   .search-wrap .input-group-text { *@
+  @*     color: #9aa1ab; *@
+  @*     border-radius: 8px 0 0 8px; *@
+  @*     padding-right: 0.35rem; *@
+  @*   } *@
+  @* *@
+  @*   .search-wrap .form-control { *@
+  @*     border-radius: 0 8px 8px 0; *@
+  @*     box-shadow: none; *@
+  @*     font-size: 0.92rem; *@
+  @*   } *@
+  @* *@
+  @*   .search-wrap .form-control::placeholder { *@
+  @*     color: #7f8691; *@
+  @*   } *@
+  @* *@
+  @*   .profile-btn { *@
+  @*     width: 38px; *@
+  @*     height: 38px; *@
+  @*     border: none; *@
+  @*     border-radius: 50%; *@
+  @*     background: transparent; *@
+  @*     color: #d4d9e1; *@
+  @*     display: inline-flex; *@
+  @*     align-items: center; *@
+  @*     justify-content: center; *@
+  @*     font-size: 1.05rem; *@
+  @*   } *@
+  @* *@
+  @* </style> *@
+    
+    
+    
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm box-shadow mb-3 main-header">
         <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Moviezilla.Web</a>
+            <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">
+                <img src="~/images/MoviezillaLogo.png" alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
+                <ul class="navbar-nav flex-grow-1 gap-4 main-header-left-menu">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="nav-link @(@ViewData["PageName"]?.ToString() == "Movies" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Movies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <a class="nav-link @(@ViewData["PageName"]?.ToString() == "Cinemas" ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Privacy">Cinemas</a>
                     </li>
                 </ul>
-                <partial name="_LoginPartial"/>
+                @* <partial name="_LoginPartial"/> *@
             </div>
         </div>
     </nav>
 </header>
+
 <div class="container">
     <main role="main" class="pb-3">
         @RenderBody()
